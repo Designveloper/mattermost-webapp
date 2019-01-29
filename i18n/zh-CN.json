@@ -157,7 +157,7 @@
   "add_teams_to_scheme.title": "添加团队到**团队选择器**列表",
   "add_user_to_channel_modal.add": "添加",
   "add_user_to_channel_modal.cancel": "取消",
-  "add_user_to_channel_modal.help": "开始输入以搜索频道。使用 ↑↓ 浏览，↵ 选择，ESC 退出。",
+  "add_user_to_channel_modal.help": "开始输入以搜索频道。使用 ↑↓ 浏览、↵ 选择、ESC 取消。",
   "add_user_to_channel_modal.membershipExistsError": "{name}已经是该频道成员",
   "add_user_to_channel_modal.title": "添加{name}到频道",
   "add_users_to_team.title": "添加新成员到 {teamName} 团队",
