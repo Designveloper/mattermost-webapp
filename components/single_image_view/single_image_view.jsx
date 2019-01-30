@@ -11,7 +11,6 @@ import {FileTypes} from 'utils/constants.jsx';
 import {
     getFileType,
 } from 'utils/utils';
-
 import ViewImageModal from 'components/view_image';
 
 const PREVIEW_IMAGE_MIN_DIMENSION = 50;
