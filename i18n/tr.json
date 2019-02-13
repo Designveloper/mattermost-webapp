@@ -2884,8 +2884,6 @@
   "user_list.notFound": "Herhangi bir kullanıcı bulunamadı",
   "user_profile.account.editSettings": "Hesap Ayarlarını Düzenle",
   "user_profile.account.localTime": "Yerel Saat:  ",
-  "user_profile.add_user_to_channel": "Kanala Ekle",
-  "user_profile.add_user_to_channel.icon": "Kanala Kullanıcı Ekle Simgesi",
   "user_profile.send.dm": "İletiyi Gönder",
   "user_profile.send.dm.icon": "İleti Gönderme Simgesi",
   "user.settings.advance.codeBlockOnCtrlEnterSendDesc": "Bu seçenek etkinleştirildiğinde, ENTER tuşu, ``` ile başlayan kod olarak biçimlendirilmiş iletilere yeni bir satır ekler. CTRL+ENTER tuşları iletiyi gönderir.",

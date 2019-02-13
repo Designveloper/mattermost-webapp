@@ -2884,8 +2884,6 @@
   "user_list.notFound": "Nie odnaleziono użytkowników",
   "user_profile.account.editSettings": "Edytuj Ustawienia Konta",
   "user_profile.account.localTime": "Czas Lokalny: ",
-  "user_profile.add_user_to_channel": "Dodaj do Kanału",
-  "user_profile.add_user_to_channel.icon": "Dodaj Użytkownika do Ikony Kanału",
   "user_profile.send.dm": "Wyślij wiadomość",
   "user_profile.send.dm.icon": "Ikona Wysyłki Wiadomości",
   "user.settings.advance.codeBlockOnCtrlEnterSendDesc": "Jeśli włączone, ENTER wstawia nową linię w wiadomościach sformatowanych jako kod zaczynający się od ```. CTRL + ENTER przesyła wiadomość.",
