@@ -1410,7 +1410,7 @@
   "admin.team.openServerTitle": "Ativar Servidor Aberto: ",
   "admin.team.restrict_direct_message_any": "Qualquer usuário no Servidor Mattermost",
   "admin.team.restrict_direct_message_team": "Qualquer membro da equipe",
-  "admin.team.restrictDescription": "Equipes e contas de usuário só pode ser criada a partir de um domínio específico (ex. \"mattermost.org\") ou lista separada por vírgulas de domínios (ex. \"corp.mattermost.com, mattermost.org\").",
+  "admin.team.restrictDescription": "Equipes e contas de usuário só podem ser criadas a partir de um domínio específico (ex. \"mattermost.org\") ou lista separada por vírgulas de domínios (ex. \"corp.mattermost.com, mattermost.org\").",
   "admin.team.restrictDirectMessage": "Permitir que os usuários abram o canal de Mensagens Diretas com:",
   "admin.team.restrictDirectMessageDesc": "'Qualquer usuário no servidor Mattermost' habilita os usuário a abrir um canal de Mensagens Diretas para qualquer usuário no servidor, mesmo se estes não fazem parte do mesmo time. 'Qualquer membro da equipe' limita o acesso para o menu 'Mais' dos canais de Mensagens Diretas apenas para usuários no mesmo time.\n  \nNota: Esta configuração afeta apenas a UI, não as permissões no servidor.",
   "admin.team.restrictExample": "Ex.: \"corp.mattermost.com, mattermost.org\"",
