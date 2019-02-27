@@ -1504,13 +1504,22 @@
   "analytics.team.title": "{team}的團隊統計",
   "analytics.team.totalPosts": "全部發文",
   "analytics.team.totalUsers": "總活躍使用者",
+<<<<<<< HEAD
   "announcement_bar.error.email_verification_required": "請檢查電子郵件信箱以驗證電子郵件地址。",
+=======
+  "announcement_bar.error.email_verification_required": "請檢查電子郵件信箱 {email} 以驗證電子郵件地址。",
+>>>>>>> translations PR 20190225 (#2408)
   "announcement_bar.error.license_expired": "企業授權已過期，部份功能可能會被停用。[請更新授權](!{link})。",
   "announcement_bar.error.license_expiring": "企業授權於 {date, date, long} 過期。[請更新授權](!{link})。",
   "announcement_bar.error.past_grace": "企業版授權已過期，某些功能已被關閉。詳請聯絡系統管理員。",
   "announcement_bar.error.preview_mode": "預覽模式：電子郵件通知尚未設定",
+<<<<<<< HEAD
   "announcement_bar.error.site_url_gitlab.full": "請在[系統控制台](/admin_console/general/configuration)設定[站台網址](https://docs.mattermost.com/administration/config-settings.html#site-url)，如果使用 GitLab Mattermost 請在 gitlab.rb 設定。",
   "announcement_bar.error.site_url.full": "請在[系統控制台](/admin_console/general/configuration)設定[站台網址](https://docs.mattermost.com/administration/config-settings.html#site-url)。",
+=======
+  "announcement_bar.error.site_url_gitlab.full": "Please configure your [Site URL](https://docs.mattermost.com/administration/config-settings.html#site-url) in the [System Console](/admin_console/general/configuration) or in gitlab.rb if you're using GitLab Mattermost.",
+  "announcement_bar.error.site_url.full": "Please configure your [Site URL](https://docs.mattermost.com/administration/config-settings.html#site-url) in the [System Console](/admin_console/general/configuration).",
+>>>>>>> translations PR 20190225 (#2408)
   "announcement_bar.notification.email_verified": " 電子郵件地址已驗證",
   "api.channel.add_member.added": "{username} 已將 {addedUsername} 加入頻道",
   "api.channel.delete_channel.archived": "{username} 已封存頻道。",

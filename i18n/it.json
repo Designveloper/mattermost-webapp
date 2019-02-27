@@ -626,7 +626,11 @@
   "admin.group_settings.groups_list.unlink_selected": "Scollega Gruppi Selezionati",
   "admin.group_settings.groupsPageTitle": "Gruppi",
   "admin.group_settings.introBanner": "I gruppi sono un modo per organizzare gli utenti e applicare operazioni a tutti gli utenti in uno specifico gruppo.\nPer ulteriori informazioni sui Gruppi, vedere la [documentazione](!https://www.mattermost.com/default-ad-ldap-groups).",
+<<<<<<< HEAD
   "admin.group_settings.ldapGroupsDescription": "Collega e configura i gruppi dal tuo AD/LDAP a Mattermost. Assicurarsi di aver configurato un [filtro di gruppo]({siteURL}/admin_console/authentication/ldap).",
+=======
+  "admin.group_settings.ldapGroupsDescription": "Collega e configura i gruppi dal tuo AD/LDAP a Mattermost. Assicurarsi di aver configurato un [filtro di gruppo](/admin_console/authentication/ldap).",
+>>>>>>> translations PR 20190225 (#2408)
   "admin.group_settings.ldapGroupsTitle": "Gruppi AD/LDAP",
   "admin.image.amazonS3BucketDescription": "Nome selezionato per il bucket S3 in AWS.",
   "admin.image.amazonS3BucketExample": "Es.: \"mattermost-media\"",
@@ -2099,6 +2103,7 @@
   "help.attaching.publicLinks.description": "I link pubblici ti consentono di condividere file con persone esterne al gruppodi Mattermost. Apri un file con l'anteprima e clicca su **Copia collegamento pubblico**. Questo apre una finestra di dialogo con un collegamento da copiare. Quando il collegamento è condiviso e aperto da altri utenti, il file verrà automaticamente scaricato.",
   "help.attaching.publicLinks.title": "Convisione collegamenti pubblici",
   "help.attaching.publicLinks2": "Se **Copia collegamento pubblico** non è visibile nell'anteprima del file e vuoi attivare questa funzione, chiedi al tuo Amministratore di Sistema di attivare la funzione nella Console di Sistema sotto **Sicurezza** > **Collegamenti pubblici**.",
+<<<<<<< HEAD
   "help.attaching.supported.description": "Se stai cercando di visualizzare l'anteprima di un file non supportato, il visualizzatore aprira una finestra standard. I tipi di file supportati dipendono pesantemente dal browser e dal sistema operativo utilizzati ma i seguenti formati sono supportati da Mattermost nell maggior parte dei casi:",
   "help.attaching.supported.title": "Tipi media supportati",
   "help.attaching.supportedListItem1": "Immagini: BMP, GIF, JPG, JPEG, PNG",
@@ -2108,6 +2113,12 @@
   "help.attaching.title": "Allega file",
   "help.commands.builtin.description": "I seguenti comandi slash sono disponibili in Mattermost:",
   "help.commands.builtin.title": "Comandi integrati",
+=======
+  "help.attaching.supported": "#### Tipi di media supportati\nSe stai cercando di visualizzare l'anteprima di un file non supportato, il visualizzatore aprira una finestra standard. I tipi di file supportati dipendono pesantemente dal browser e dal sistema operativo utilizzati ma i seguenti formati sono supportati da Mattermost nell maggior parte dei casi:",
+  "help.attaching.supportedList": "- Immagini: BMP, GIF, JPG, JPEG, PNG\n- Video: MP4\n- Audio: MP3, M4A\n- Documenti: PDF",
+  "help.attaching.title": "#Allega file\n",
+  "help.commands.builtin": "## Comandi integrati\nI seguenti comandi slash sono disponibili in Mattermost:",
+>>>>>>> translations PR 20190225 (#2408)
   "help.commands.builtin2": "Comincia digitando '/' e una lista di comandi slash comparirà sopra la casella del messaggio. L'autocompletament aiuta fornendo dei formati di esempio e una breve descrizione del comando slash.",
   "help.commands.custom.description": "I comandi slash personalizzati possono essere integrati con applicazioni esterne. Per esempio, un gruppo può configurare un comando slash per controllare lo stato di un record con '/paziente marco rossi' oppure per controllare le previsioni meteo per la settimana con '/meteo roma week'. Controlla con il tuo Amministratore di Sistema o apri la lista completa digitando '/' per capire se il tuo gruppo a configurato dei comandi slash personalizzati.",
   "help.commands.custom.title": "Comandi personalizzati",
@@ -2145,11 +2156,17 @@
   "help.formatting.headings2": "Oppure, per sottolineare il testo usare `===` o `---` per creare dei titoli.",
   "help.formatting.headings2Example": "Titolo largo\n-------------",
   "help.formatting.headingsExample": "## Titolo largo\n### Titolo medio\n#### Titolo piccolo",
+<<<<<<< HEAD
   "help.formatting.images.description": "Per aggiungere immagini in linea usare un `!` seguito dal testo alternativo tra parentesi quadre e il collegamento tra parentesi tonde. Aggiungere il testo in hover mettendolo tra apici dopo il collegamento.",
   "help.formatting.images.title": "Immagini in linea",
   "help.formatting.imagesExample": "![alt test](link \"hover test\")\n\ne\n\n[![Build Status](https://travis-ci.org/mattermost/mattermost-server.svg?branch=master)](https://travis-ci.org/mattermost/mattermost-server) [![Github](https://assets-cdn.github.com/favicon.ico)](https://github.com/mattermost/mattermost-server)",
   "help.formatting.inline.description": "Per creare del codice in linea con un carattere a spaziatura fissa racchiudere il testo tra apici inversi.",
   "help.formatting.inline.title": "Codice in linea",
+=======
+  "help.formatting.images": "## Immagini in linea\n\nPer aggiungere immagini in linea usare un `!` seguito dal testo alternativo tra parentesi quadre e il collegamento tra parentesi tonde. Aggiungere il testo in hover mettendolo tra apici dopo il collegamento.",
+  "help.formatting.imagesExample": "![alt test](link \"hover test\")\n\ne\n\n[![Build Status](https://travis-ci.org/mattermost/mattermost-server.svg?branch=master)](https://travis-ci.org/mattermost/mattermost-server) [![Github](https://assets-cdn.github.com/favicon.ico)](https://github.com/mattermost/mattermost-server)",
+  "help.formatting.inline": "## Codice in linea\n\nPer creare del codice in linea con un carattere a spaziatura fissa racchiudere il testo tra apici inversi.",
+>>>>>>> translations PR 20190225 (#2408)
   "help.formatting.intro": "L'uso dei mark semplifica la formattazione dei messaggi. Scrivere un messaggio normalmente e usare queste regole per formattarlo in maniera speciale.",
   "help.formatting.lines.description": "Creare una linea usando tre `*`, `_`, o `-`.",
   "help.formatting.lines.title": "Linee",
