@@ -584,10 +584,13 @@
   "admin.google.EnableMarkdownDesc": "1. [登入](!https://accounts.google.com/login) Google帳號。2. 前往 [https://console.developers.google.com](!https://console.developers.google.com)，按左側邊列的**憑證**並輸入\"Mattermost - 您的公司名稱\"作為**專案名稱**，按**建立**。3. 按 **OAuth 同意畫面**  標題並輸入 \"Mattermost\" 作為 **向使用者顯示的產品名稱**。 按 **儲存**。4. 在 **憑證** 標題下，按 **建立憑證**，選擇 **OAuth 用戶端 ID** 並選擇 **網路應用程式**。\n5. 在 **限制** 的 **已授權的重新導向 URI** 中輸入 **您的 Mattermost 網址/signup/google/complete** (如： http://localhost:8065/signup/google/complete)。 按 **建立**。6. 將 **用戶端 ID** 跟 **用戶端密鑰** 貼至下面的欄位，按下**儲存**。7. 最後，前往 [Google+ API](!https://console.developers.google.com/apis/api/plus/overview) 並按 **啟用**。這可能需要花上幾分鐘以在 Google 的系統完成散佈。",
   "admin.google.tokenTitle": "Token 端點：",
   "admin.google.userTitle": "使用者 API 端點：",
+<<<<<<< HEAD
   "admin.group_settings.filters.isConfigured": "Is Configured",
   "admin.group_settings.filters.isLinked": "Is Linked",
   "admin.group_settings.filters.isUnconfigured": "Is Not Configured",
   "admin.group_settings.filters.isUnlinked": "尚未連結",
+=======
+>>>>>>> translations PR 20190314 (#2503)
   "admin.group_settings.group_detail.group_configuration": "群組設定",
   "admin.group_settings.group_detail.groupProfileDescription": "群組的名稱。",
   "admin.group_settings.group_detail.groupProfileTitle": "群組資料",
@@ -601,9 +604,12 @@
   "admin.group_settings.group_details.add_team_or_channel": "新增團隊或頻道",
   "admin.group_settings.group_details.group_profile.name": "名字：",
   "admin.group_settings.group_details.group_teams_and_channels_row.remove": "移除",
+<<<<<<< HEAD
   "admin.group_settings.group_details.group_teams_and_channels_row.remove.confirm_body": "Removing this membership will prevent future users in this group from being added to the '{name}' {displayType}.  Please note this action will not remove the existing group users from the '{name}' {displayType}.",
   "admin.group_settings.group_details.group_teams_and_channels_row.remove.confirm_button": "Yes, Remove",
   "admin.group_settings.group_details.group_teams_and_channels_row.remove.confirm_header": "Remove Membership from the '{name}' {displayType}?",
+=======
+>>>>>>> translations PR 20190314 (#2503)
   "admin.group_settings.group_details.group_teams_and_channels.no-teams-or-channels-speicified": "尚未指定任何團隊或頻道",
   "admin.group_settings.group_details.group_users.email": "電子郵件地址：",
   "admin.group_settings.group_details.group_users.no-users-found": "找不到任何使用者",
@@ -619,7 +625,11 @@
   "admin.group_settings.group_row.unlink_failed": "解除連結失敗",
   "admin.group_settings.group_row.unlinking": "解除連結中",
   "admin.group_settings.groups_list.link_selected": "連結選擇的群組",
+<<<<<<< HEAD
   "admin.group_settings.groups_list.mappingHeader": "Mattermost Linking",
+=======
+  "admin.group_settings.groups_list.mappingHeader": "AD/LDAP 連結",
+>>>>>>> translations PR 20190314 (#2503)
   "admin.group_settings.groups_list.nameHeader": "名字",
   "admin.group_settings.groups_list.no_groups_found": "沒有找到任何群組",
   "admin.group_settings.groups_list.paginatorCount": "{startCount, number} 至 {endCount, number} ，共 {total, number}",
@@ -717,6 +727,10 @@
   "admin.ldap.idAttrDesc": "用於設定 Mattermost 唯一識別碼的 AD/LDAP 伺服器屬性。其應為 AD/LDAP 中不會改變的屬性。如果使用者的 ID 屬性改變了，將會產生一個跟舊帳號沒有關聯的新 Mattermost 帳號。 如果需要在使用者已經登入後改變此欄位，請用 [platform ldap idmigrate](!https://about.mattermost.com/default-platform-ldap-idmigrate) 命令列工具。",
   "admin.ldap.idAttrEx": "如：\"objectGUID\"",
   "admin.ldap.idAttrTitle": "ID 的屬性：",
+<<<<<<< HEAD
+=======
+  "admin.ldap.jobExtraInfo": "已掃描 {ldapUsers, number} 位 LDAP 使用者與 {ldapGroups, number} 個群組。",
+>>>>>>> translations PR 20190314 (#2503)
   "admin.ldap.jobExtraInfo.addedGroupMembers": "已新增 {groupMemberAddCount, number} 位群組成員。",
   "admin.ldap.jobExtraInfo.deactivatedUsers": "停用 {deleteCount, number} 位使用者。",
   "admin.ldap.jobExtraInfo.deletedGroupMembers": "已刪除 {groupMemberDeleteCount, number} 位群組成員。",
@@ -1505,14 +1519,19 @@
   "analytics.team.totalPosts": "全部發文",
   "analytics.team.totalUsers": "總活躍使用者",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "announcement_bar.error.email_verification_required": "請檢查電子郵件信箱以驗證電子郵件地址。",
 =======
   "announcement_bar.error.email_verification_required": "請檢查電子郵件信箱 {email} 以驗證電子郵件地址。",
 >>>>>>> translations PR 20190225 (#2408)
+=======
+  "announcement_bar.error.email_verification_required": "請檢查電子郵件信箱以驗證電子郵件地址。",
+>>>>>>> translations PR 20190314 (#2503)
   "announcement_bar.error.license_expired": "企業授權已過期，部份功能可能會被停用。[請更新授權](!{link})。",
   "announcement_bar.error.license_expiring": "企業授權於 {date, date, long} 過期。[請更新授權](!{link})。",
   "announcement_bar.error.past_grace": "企業版授權已過期，某些功能已被關閉。詳請聯絡系統管理員。",
   "announcement_bar.error.preview_mode": "預覽模式：電子郵件通知尚未設定",
+<<<<<<< HEAD
 <<<<<<< HEAD
   "announcement_bar.error.site_url_gitlab.full": "請在[系統控制台](/admin_console/general/configuration)設定[站台網址](https://docs.mattermost.com/administration/config-settings.html#site-url)，如果使用 GitLab Mattermost 請在 gitlab.rb 設定。",
   "announcement_bar.error.site_url.full": "請在[系統控制台](/admin_console/general/configuration)設定[站台網址](https://docs.mattermost.com/administration/config-settings.html#site-url)。",
@@ -1520,6 +1539,10 @@
   "announcement_bar.error.site_url_gitlab.full": "Please configure your [Site URL](https://docs.mattermost.com/administration/config-settings.html#site-url) in the [System Console](/admin_console/general/configuration) or in gitlab.rb if you're using GitLab Mattermost.",
   "announcement_bar.error.site_url.full": "Please configure your [Site URL](https://docs.mattermost.com/administration/config-settings.html#site-url) in the [System Console](/admin_console/general/configuration).",
 >>>>>>> translations PR 20190225 (#2408)
+=======
+  "announcement_bar.error.site_url_gitlab.full": "請在[系統控制台](/admin_console/general/configuration)設定[站台網址](https://docs.mattermost.com/administration/config-settings.html#site-url)，如果使用 GitLab Mattermost 請在 gitlab.rb 設定。",
+  "announcement_bar.error.site_url.full": "請在[系統控制台](/admin_console/general/configuration)設定[站台網址](https://docs.mattermost.com/administration/config-settings.html#site-url)。",
+>>>>>>> translations PR 20190314 (#2503)
   "announcement_bar.notification.email_verified": " 電子郵件地址已驗證",
   "api.channel.add_member.added": "{username} 已將 {addedUsername} 加入頻道",
   "api.channel.delete_channel.archived": "{username} 已封存頻道。",
@@ -1730,11 +1753,16 @@
   "channel_modal.purposeEx": "如：\"用於歸檔錯誤跟改善的頻道\"",
   "channel_modal.type": "類型",
   "channel_notifications.allActivity": "所有的活動",
+<<<<<<< HEAD
   "channel_notifications.globalDefault": "Global default",
   "channel_notifications.ignoreChannelMentions": "無視 @channel 、 @here 與 @all 的提及",
   "channel_notifications.ignoreChannelMentions.help": "When enabled, @channel, @here and @all will not trigger mentions or mention notifications in this channel.",
   "channel_notifications.ignoreChannelMentions.off.title": "關閉",
   "channel_notifications.ignoreChannelMentions.on.title": "啟用",
+=======
+  "channel_notifications.globalDefault": "系統預設({notifyLevel})",
+  "channel_notifications.ignoreChannelMentions": "無視 @channel 、 @here 與 @all 的提及",
+>>>>>>> translations PR 20190314 (#2503)
   "channel_notifications.muteChannel.help": "靜音將關閉此頻道的桌面、電子郵件、推播通知。此頻道將不會被標示為未讀，除非有提及您的訊息。",
   "channel_notifications.muteChannel.off.title": "關閉",
   "channel_notifications.muteChannel.on.title": "啟用",
@@ -2101,12 +2129,18 @@
   "help.attaching.methods.description": "## 如何附加檔案\n拖放檔案或是按下訊息輸入框的附件檔案圖示。",
   "help.attaching.methods.title": "Attachment Methods",
   "help.attaching.notSupported": "尚未支援文件預覽 (Word, Excel, PPT)。",
+<<<<<<< HEAD
   "help.attaching.pasting.description": "#### 貼上圖片\n使用 Chrome 跟 Edge 瀏覽器時，您也可以直接從剪貼簿貼上以上傳檔案。此功能尚未支援其他瀏覽器。",
   "help.attaching.pasting.title": "Pasting Images",
   "help.attaching.previewer.description": "## 檔案預覽器\nMattermost 有內建檔案預覽器用來觀看、下載檔案並分享公開連結。按附加檔案的縮圖便可以用檔案預覽器打開。",
   "help.attaching.previewer.title": "File Previewer",
   "help.attaching.publicLinks.description": "#### 分享公開連結\n公開連結讓您可以分享附件檔案給 Mattermost 團隊以外的人。按下附件檔案縮圖以打開檔案預覽器然後按**取得公開連結**。這會開啟一個帶有連結的對話框。當分享這個連結給他人並被他人打開的時候，會自動開始下載檔案。",
   "help.attaching.publicLinks.title": "Sharing Public Links",
+=======
+  "help.attaching.pasting": "#### 貼上圖片\n使用 Chrome 跟 Edge 瀏覽器時，您也可以直接從剪貼簿貼上以上傳檔案。此功能尚未支援其他瀏覽器。",
+  "help.attaching.previewer": "## 檔案預覽器\nMattermost 有內建檔案預覽器用來觀看、下載檔案並分享公開連結。按附加檔案的縮圖便可以用檔案預覽器打開。",
+  "help.attaching.publicLinks": "#### 分享公開連結\n公開連結讓您可以分享附件檔案給 Mattermost 團隊以外的人。按下附件檔案縮圖以打開檔案預覽器然後按**取得公開連結**。這會開啟一個帶有連結的對話框。當分享這個連結給他人並被他人打開的時候，會自動開始下載檔案。",
+>>>>>>> translations PR 20190314 (#2503)
   "help.attaching.publicLinks2": "如果檔案預覽器裡面找不到**取得公開連結**但想要啟用這功能，您可以詢問系統管理員請他在系統主控台裡的**安全** > **公開連結**處開啟。",
   "help.attaching.supported.description": "#### 支援的媒體類型\n如果您嘗試預覽預覽器不支援的媒體，檔案預覽器會顯示附件檔案的標準圖示。支援的媒體格式跟瀏覽器以及作業系統高度相關，不過在大部分瀏覽器上使用 Mattermost 支援下列的格式：",
   "help.attaching.supported.title": "Supported Media Types",

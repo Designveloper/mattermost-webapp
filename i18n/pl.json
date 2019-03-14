@@ -248,6 +248,7 @@
   "admin.complianceExport.exportFormat.globalrelay": "Global Relay EML",
   "admin.complianceExport.exportFormat.title": "Format Eksportu:",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "admin.complianceExport.exportJobStartTime.description": "Ustaw dzienny harmonogram zadania eksportu. Wybierz czas kiedy mniej użytkowników używa twojego systemu. Godzina musi być podana w formacie 24-godzinnym zgodnie z formatem HH:MM.",
   "admin.complianceExport.exportJobStartTime.example": "Np. \"02:00\"",
   "admin.complianceExport.exportJobStartTime.title": "Czas eksportu zgodności:",
@@ -256,6 +257,11 @@
   "admin.complianceExport.exportJobStartTime.example": "Np. \"02:00\"",
   "admin.complianceExport.exportJobStartTime.title": "Compliance Export time:",
 >>>>>>> translations PR 20190225 (#2408)
+=======
+  "admin.complianceExport.exportJobStartTime.description": "Ustaw dzienny harmonogram zadania eksportu. Wybierz czas kiedy mniej użytkowników używa twojego systemu. Godzina musi być podana w formacie 24-godzinnym zgodnie z formatem HH:MM.",
+  "admin.complianceExport.exportJobStartTime.example": "Np. \"02:00\"",
+  "admin.complianceExport.exportJobStartTime.title": "Czas eksportu zgodności:",
+>>>>>>> translations PR 20190314 (#2503)
   "admin.complianceExport.globalRelayCustomerType.a10.description": "A10/Type 10",
   "admin.complianceExport.globalRelayCustomerType.a9.description": "A9/Type 9",
   "admin.complianceExport.globalRelayCustomerType.description": "Typ konta konsumenta Global Relay jaki posiada twoja organizacja.",
@@ -443,6 +449,7 @@
   "admin.email.smtpUsernameExample": "Np.: \"admin@yourcompany.com\", \"AKIADTOVBGERKLCBV\"",
   "admin.email.smtpUsernameTitle": "Nazwa użytkownika SMTP:",
   "admin.email.testing": "Testowanie...",
+<<<<<<< HEAD
   "admin.experimental.allowCustomThemes.desc": "Enables the **Display > Theme > Custom Theme** section in Account Settings.",
   "admin.experimental.allowCustomThemes.title": "Allow Custom Themes:",
   "admin.experimental.clientSideCertCheck.desc": "When **primary**, after the client side certificate is verified, user’s email is retrieved from the certificate and is used to log in without a password. When **secondary**, after the client side certificate is verified, user’s email is retrieved from the certificate and matched against the one supplied by the user. If they match, the user logs in with regular email/password credentials.",
@@ -525,6 +532,8 @@
   "admin.experimental.userStatusAwayTimeout.desc": "This setting defines the number of seconds after which the user’s status indicator changes to \"Away\", when they are away from Mattermost.",
   "admin.experimental.userStatusAwayTimeout.example": "Np.: \"300\"",
   "admin.experimental.userStatusAwayTimeout.title": "User Status Away Timeout:",
+=======
+>>>>>>> translations PR 20190314 (#2503)
   "admin.false": "wyłączone",
   "admin.field_names.allowBannerDismissal": "Pozwól ukryć banner",
   "admin.field_names.bannerColor": "Kolor baneru:",
@@ -598,10 +607,13 @@
   "admin.google.EnableMarkdownDesc": "1. [Zaloguj się](!https://accounts.google.com/login) na swoje konto Google.\n2. Przejdź do strony [https://console.developers.google.com](!https://console.developers.google.com), kliknij **Dane uwierzytelniające** na pasku bocznym po lewej stronie i wprowadź \"Mattermost - nazwa-twojej-firmy\" jako **Nazwa Projektu**, a następnie kliknij **Create**.\n3. Kliknij nagłówek **OAuth zgody ekranu** i wprowadź \"Mattermost\" jako **Nazwa produktu wyświetlana użytkownikom**, a następnie kliknij przycisk **Zapisz**.\n4. W nagłówku **Dane uwierzytelniające** kliknij **Utwórz dane uwierzytelniające**, wybierz **ID klienta OAuth** i wybierz **Aplikacja internetowa**.\n5. W obszarze **Ograniczenia** i **Autoryzowane identyfikatory URI przekierowania** wprowadź **twój-url-mattermost/signup/google/complete** (przykład: http://localhost:8065/signup/ google/complete). Kliknij **Utwórz**.\n6. Wklej **ID klienta** i **klucz klienta** w poniższe pola, a następnie kliknij przycisk **Zapisz**.\n7. Na koniec przejdź do [Interfejs API Google+] (!https://console.developers.google.com/apis/api/plus/overview) i kliknij *Włącz*. Może to potrwać kilka minut, zanim rozprzestrzeni się za pośrednictwem systemów Google.",
   "admin.google.tokenTitle": "Punkt końcowy Znaku Uwierzytelniającego:",
   "admin.google.userTitle": "Punkt końcowy API użytkownika:",
+<<<<<<< HEAD
   "admin.group_settings.filters.isConfigured": "Is Configured",
   "admin.group_settings.filters.isLinked": "Is Linked",
   "admin.group_settings.filters.isUnconfigured": "Is Not Configured",
   "admin.group_settings.filters.isUnlinked": "Nie połączony",
+=======
+>>>>>>> translations PR 20190314 (#2503)
   "admin.group_settings.group_detail.group_configuration": "Konfiguracja grupy",
   "admin.group_settings.group_detail.groupProfileDescription": "Nazwa dla tej grupy.",
   "admin.group_settings.group_detail.groupProfileTitle": "Profil grupy",
@@ -609,6 +621,7 @@
   "admin.group_settings.group_detail.groupTeamsAndChannelsTitle": "Członkostwo zespołowe i kanałowe",
   "admin.group_settings.group_detail.groupUsersDescription": "Lista użytkowników Mattermost przypisana do tej grupy.",
   "admin.group_settings.group_detail.groupUsersTitle": "Użytkownicy",
+<<<<<<< HEAD
 <<<<<<< HEAD
   "admin.group_settings.group_detail.introBanner": "Skonfiguruj domyślne zespoły i kanały oraz zobacz użytkowników należących do tej grupy.",
   "admin.group_settings.group_details.add_channel": "Dodaj kanał",
@@ -653,24 +666,44 @@
 =======
   "admin.group_settings.group_profile.group_users.ldapConnector": "AD/LDAP Connector is configured to sync and manage this group and its users. [Click here to view](/admin_console/authentication/ldap)",
   "admin.group_settings.group_row.configure": "Configure",
+=======
+  "admin.group_settings.group_detail.introBanner": "Skonfiguruj domyślne zespoły i kanały oraz zobacz użytkowników należących do tej grupy.",
+  "admin.group_settings.group_details.add_channel": "Dodaj kanał",
+  "admin.group_settings.group_details.add_team": "Dodaj Zespół",
+  "admin.group_settings.group_details.add_team_or_channel": "Dodaj Zespół lub Kanał",
+  "admin.group_settings.group_details.group_profile.name": "Nazwa:",
+  "admin.group_settings.group_details.group_teams_and_channels_row.remove": "Usuń",
+  "admin.group_settings.group_details.group_teams_and_channels.no-teams-or-channels-speicified": "Żadne zespoły i kanały nie zostały do tej pory określone",
+  "admin.group_settings.group_details.group_users.email": "E-Mail:",
+  "admin.group_settings.group_details.group_users.no-users-found": "Nie znaleziono użytkowników",
+  "admin.group_settings.group_profile.group_teams_and_channels.name": "Nazwa",
+  "admin.group_settings.group_profile.group_users.ldapConnector": "Łącznik AD/LDAP został skonfigurowany aby synchronizować i zarządzać tą grupą i jej użytkownikami. [Kliknij tutaj aby zobaczyć](/admin_console/authentication/ldap)",
+  "admin.group_settings.group_row.configure": "Konfiguruj",
+>>>>>>> translations PR 20190314 (#2503)
   "admin.group_settings.group_row.edit": "Edytuj",
-  "admin.group_settings.group_row.link_failed": "Link failed",
-  "admin.group_settings.group_row.linked": "Linked",
-  "admin.group_settings.group_row.linking": "Linking",
-  "admin.group_settings.group_row.not_linked": "Not Linked",
-  "admin.group_settings.group_row.unlink_failed": "Unlink failed",
-  "admin.group_settings.group_row.unlinking": "Unlinking",
-  "admin.group_settings.groups_list.link_selected": "Link Selected Groups",
-  "admin.group_settings.groups_list.mappingHeader": "AD/LDAP Linking",
+  "admin.group_settings.group_row.link_failed": "Powiązanie nieudane",
+  "admin.group_settings.group_row.linked": "Połączony",
+  "admin.group_settings.group_row.linking": "Łączenie",
+  "admin.group_settings.group_row.not_linked": "Nie połączony",
+  "admin.group_settings.group_row.unlink_failed": "Odwiązanie nieudane",
+  "admin.group_settings.group_row.unlinking": "Odłączanie",
+  "admin.group_settings.groups_list.link_selected": "Połącz Wybrane Grupy",
+  "admin.group_settings.groups_list.mappingHeader": "Łączenie AD/LDAP",
   "admin.group_settings.groups_list.nameHeader": "Nazwa",
-  "admin.group_settings.groups_list.no_groups_found": "No groups found",
-  "admin.group_settings.groups_list.paginatorCount": "{startCount, number} - {endCount, number} of {total, number}",
-  "admin.group_settings.groups_list.unlink_selected": "Unlink Selected Groups",
+  "admin.group_settings.groups_list.no_groups_found": "Nie znaleziono grup",
+  "admin.group_settings.groups_list.paginatorCount": "{startCount, number} - {endCount, number} na {total, number}",
+  "admin.group_settings.groups_list.unlink_selected": "Rozłącz Wybrany Grupy",
   "admin.group_settings.groupsPageTitle": "Grupy",
+<<<<<<< HEAD
   "admin.group_settings.introBanner": "Groups are a way to organize users and apply actions to all users within that group.\nFor more information on Groups, please see [documentation](!https://www.mattermost.com/default-ad-ldap-groups).",
   "admin.group_settings.ldapGroupsDescription": "Link and configure groups from your AD/LDAP to Mattermost. Please ensure you have configured a [group filter](/admin_console/authentication/ldap).",
   "admin.group_settings.ldapGroupsTitle": "AD/LDAP Groups",
 >>>>>>> translations PR 20190225 (#2408)
+=======
+  "admin.group_settings.introBanner": "Grupy to sposób na uporządkowanie użytkowników i zastosowanie działań dla wszystkich użytkowników w tej grupie.\nWięcej informacji o Grupach znajduje się w [dokumentacji](!https://www.mattermost.com/default-ad-ldap-groups).",
+  "admin.group_settings.ldapGroupsDescription": "Połącz i skonfiguruj grupy z AD/LDAP do Mattermost. Upewnij się, że skonfigurowałeś [filtr grupy](/admin_console/authentication/ldap).",
+  "admin.group_settings.ldapGroupsTitle": "Grupy AD/LDAP",
+>>>>>>> translations PR 20190314 (#2503)
   "admin.image.amazonS3BucketDescription": "Nazwa którą wybrałeś dla swojego \"pojemnika S3\" w AWS.",
   "admin.image.amazonS3BucketExample": "Np. \"mattermost-media\"",
   "admin.image.amazonS3BucketTitle": "Amazon S3 Bucket:",
@@ -760,6 +793,10 @@
   "admin.ldap.idAttrDesc": "Atrybut na serwerze AD/LDAP używany jako unikatowy identyfikator w Mattermost. Powinien to być atrybut AD/LDAP o wartości, która się nie zmienia. Jeśli atrybut ID użytkownika zmieni się, utworzy nowe konto Mattermost, które nie jest powiązane z poprzednim atrybutem.\n \nJeśli chcesz zmienić to pole, gdy użytkownicy już się zalogowali, użyj narzędzia CLI [mattermost ldap idmigrate](!https://about.mattermost.com/default-platform-ldap-idmigrate).",
   "admin.ldap.idAttrEx": "Np.: \"objectGUID\"",
   "admin.ldap.idAttrTitle": "Atrybut ID: ",
+<<<<<<< HEAD
+=======
+  "admin.ldap.jobExtraInfo": "Zeskanowano {ldapUsers, number} użytkowników LDAP i {ldapGroups, number} grup.",
+>>>>>>> translations PR 20190314 (#2503)
   "admin.ldap.jobExtraInfo.addedGroupMembers": "Dodano {groupMemberAddCount, number} członków grupy.",
   "admin.ldap.jobExtraInfo.deactivatedUsers": "Zdezaktywowano {deleteCount, number} użytkowników.",
   "admin.ldap.jobExtraInfo.deletedGroupMembers": "Usunięto {groupMemberDeleteCount, number} członków grupy.",
@@ -870,7 +907,11 @@
   "admin.mfa.title": "Wieloczynnikowe Uwierzytelnianie",
   "admin.nav.administratorsGuide": "Przewodnik administratora",
   "admin.nav.commercialSupport": "Wsparcie komercyjne",
+<<<<<<< HEAD
   "admin.nav.menuAriaLabel": "Admin Console Menu",
+=======
+  "admin.nav.logout": "Wyloguj się",
+>>>>>>> translations PR 20190314 (#2503)
   "admin.nav.switch": "Wybór zespołu",
   "admin.nav.troubleshootingForum": "Forum wsparcia",
   "admin.notifications.email": "E-mail",
@@ -993,6 +1034,11 @@
   "admin.permissions.permission.manage_team_roles.name": "Zarządzaj rolami zespołu",
   "admin.permissions.permission.manage_team.description": "Zarządzaj zespołem",
   "admin.permissions.permission.manage_team.name": "Zarządzaj zespołem",
+<<<<<<< HEAD
+=======
+  "admin.permissions.permission.manage_webhooks.description": "Twórz, edytuj i usuwaj przychodzące oraz wychodzące webhooki.",
+  "admin.permissions.permission.manage_webhooks.name": "Zarządzaj Webhookami",
+>>>>>>> translations PR 20190314 (#2503)
   "admin.permissions.permission.permanent_delete_user.description": "Trwale usuń użytkownika",
   "admin.permissions.permission.permanent_delete_user.name": "Trwale usuń użytkownika",
   "admin.permissions.permission.read_channel.description": "Czytaj kanał",
@@ -1058,6 +1104,10 @@
   "admin.permissions.teamScheme.schemeDetailsDescription": "Ustaw nazwę i opis dla tego schematu.",
   "admin.permissions.teamScheme.schemeDetailsTitle": "Szczegóły Schematu",
   "admin.permissions.teamScheme.schemeNameLabel": "Nazwa Schematu:",
+<<<<<<< HEAD
+=======
+  "admin.permissions.teamScheme.schemeNamePlaceholder": "Nazwa Schematu",
+>>>>>>> translations PR 20190314 (#2503)
   "admin.permissions.teamScheme.selectTeamsDescription": "Wybierz zespoły, w których wymagane są wyjątki z uprawnieniami.",
   "admin.permissions.teamScheme.selectTeamsTitle": "Wybierz zespoły, aby nadpisać uprawnienia",
   "admin.plugin.choose": "Wybierz plik",
@@ -1263,7 +1313,11 @@
   "admin.service.insecureTlsTitle": "Włącz Niezabezpieczone Wychodzące Połączenia:",
   "admin.service.integrationAdmin": "Ogranicz zarządzanie integracjami tylko do Adminów:",
   "admin.service.integrationAdminDesc": "Jeśli prawda, webhooki i komendy slash mogą być tworzone, edytowane i oglądane przez Team i Administratorów Systemu, a aplikacje OAuth 2.0 przez Administratorów Systemu. Integracje są dostępne dla wszystkich użytkowników po ich utworzeniu przez Administratora.",
+<<<<<<< HEAD
   "admin.service.internalConnectionsDesc": "Biała lista lokalnych adresów sieciowych, która może być proszona przez serwer Mattermost w imieniu klienta. Należy zachować ostrożność podczas konfigurowania tych ustawień, by uniknąć niezamierzonego dostępu do twojej sieci lokalnej. Zobacz [Dokumentacja](https://mattermost.com/pl/default-allow-untrusted-internal-connections) aby dowiedzieć się więcej.",
+=======
+  "admin.service.internalConnectionsDesc": "W środowiskach testowych, na przykład podczas opracowywania integracji lokalnie na komputerze programisty, użyj tego ustawienia, aby określić domeny, adresy IP lub notacje CIDR, którym umożliwisz na połączenia wewnętrzne. Oddziel dwie lub więcej domen spacjami. **Nie jest zalecane do użycia w produkcji**, ponieważ może to pozwolić użytkownikowi na wyodrębnienie poufnych danych z serwera lub sieci wewnętrznej.\n \nDomyślnie adresy URL dostarczone przez użytkownika, takie jak te używane dla metadanych Open Graph, webhooków lub komend za ukośnikiem,, nie będą mogły łączyć się z zastrzeżonymi adresami IP, w tym z sprzężeniami zwrotnymi lub adresami lokalnymi łącza używanymi w sieciach wewnętrznych. Powiadomienia push i adresy URL serwera OAuth 2.0 są zaufane i nie wpływają na to ustawienie.",
+>>>>>>> translations PR 20190314 (#2503)
   "admin.service.internalConnectionsEx": "webhooks.internal.example.com 127.0.0.1 10.0.16.0/28",
   "admin.service.internalConnectionsTitle": "Pozwól na niezaufane połączenia wewnętrzne do: ",
   "admin.service.letsEncryptCertificateCacheFile": "Plik Pamięci Podręcznej Certyfikatu Let's Encrypt:",
@@ -1318,8 +1372,14 @@
   "admin.sidebar.access-control": "Access Control",
   "admin.sidebar.advanced": "Zaawansowane",
   "admin.sidebar.announcement": "Baner ogłoszenia",
+<<<<<<< HEAD
   "admin.sidebar.audits": "Aktywność użytkowników",
   "admin.sidebar.authentication": "Autoryzacja",
+=======
+  "admin.sidebar.audits": "Zgodność i Audyt",
+  "admin.sidebar.authentication": "Autoryzacja",
+  "admin.sidebar.client_versions": "Wersje klientów",
+>>>>>>> translations PR 20190314 (#2503)
   "admin.sidebar.cluster": "Wysoka dostępność",
   "admin.sidebar.compliance": "Zgodność",
   "admin.sidebar.compliance_export": "Eksport zgodności (Beta)",
@@ -1350,7 +1410,11 @@
   "admin.sidebar.license": "Edycja i licencja",
   "admin.sidebar.localization": "Języki",
   "admin.sidebar.logging": "Ustawienia logów",
+<<<<<<< HEAD
   "admin.sidebar.logs": "Logi serwera",
+=======
+  "admin.sidebar.logs": "Logi",
+>>>>>>> translations PR 20190314 (#2503)
   "admin.sidebar.metrics": "Monitorowanie wydajności",
   "admin.sidebar.mfa": "MFA",
   "admin.sidebar.nativeAppLinks": "Link do aplikacji Mattermost",
@@ -1365,6 +1429,10 @@
   "admin.sidebar.publicLinks": "Publiczne linki",
   "admin.sidebar.push": "Powiadomienia Push",
   "admin.sidebar.rateLimiting": "Ograniczenia Prędkości",
+<<<<<<< HEAD
+=======
+  "admin.sidebar.reports": "RAPORTY",
+>>>>>>> translations PR 20190314 (#2503)
   "admin.sidebar.saml": "SAML 2.0",
   "admin.sidebar.schemes": "Schematy uprawnień",
   "admin.sidebar.security": "Bezpieczeństwo",
@@ -1376,6 +1444,7 @@
   "admin.sidebar.system-scheme": "Schemat systemowy",
   "admin.sidebar.users": "Użytkownicy",
   "admin.sidebar.usersAndTeams": "Użytkownicy i zespoły",
+<<<<<<< HEAD
 <<<<<<< HEAD
   "admin.sidebar.view_statistics": "Statystyki systemu",
   "admin.sidebarHeader.systemConsole": "Konsola systemu",
@@ -1389,6 +1458,13 @@
   "admin.sql.connMaxLifetimeExample": "Np.: \"3600000\"",
   "admin.sql.connMaxLifetimeTitle": "Maximum Connection Lifetime:",
 >>>>>>> translations PR 20190225 (#2408)
+=======
+  "admin.sidebar.view_statistics": "Statystyki systemu",
+  "admin.sidebarHeader.systemConsole": "Konsola systemu",
+  "admin.sql.connMaxLifetimeDescription": "Maksymalny czas życia (w milisekundach) dla połączenia z bazą danych.",
+  "admin.sql.connMaxLifetimeExample": "Np.: \"3600000\"",
+  "admin.sql.connMaxLifetimeTitle": "Maksymalny czas życia połączenia:",
+>>>>>>> translations PR 20190314 (#2503)
   "admin.sql.dataSource": "Źródło danych:",
   "admin.sql.dataSourceDescription": "Ustaw źródłową bazę danych w pliku config.json.",
   "admin.sql.driverName": "Nazwa sterownika:",
@@ -1443,10 +1519,13 @@
   "admin.team.emailInvitationsTitle": "Włącz Zaproszenia Email: ",
   "admin.team.enableConfirmNotificationsToChannelDescription": "Jeśli włączone, użytkownicy zostaną zapytani podczas wysyłania wzmianki @channel i @all w kanałach powyżej pięciu użytkowników. Jeśli wyłączone, żadne potwierdzenie nie będzie wymagane.",
   "admin.team.enableConfirmNotificationsToChannelTitle": "Pokaż okno dialogowe potwierdzenia @channel i @all: ",
+<<<<<<< HEAD
   "admin.team.invalidateEmailInvitesDescription": "This will invalidate active email invitations that have not been accepted by the user.  By default email invitations expire after 48 hours.",
   "admin.team.invalidateEmailInvitesFail": "Unable to invalidate pending email invites: {error}",
   "admin.team.invalidateEmailInvitesSuccess": "Pending email invitations invalidated successfully",
   "admin.team.invalidateEmailInvitesTitle": "Invalidate pending email invites",
+=======
+>>>>>>> translations PR 20190314 (#2503)
   "admin.team.maxChannelsDescription": "Maksymalna liczba kanałów dla zespołu, włącznie z aktywnymi jak i archiwalnymi kanałami.",
   "admin.team.maxChannelsExample": "Np.: \"100\"",
   "admin.team.maxChannelsTitle": "Maksymalna Ilość kanałów Dla Zespołu:",
@@ -1485,6 +1564,13 @@
   "admin.true": "włączone",
   "admin.user_item.authServiceEmail": "**Metoda logowania:** E-mail",
   "admin.user_item.authServiceNotEmail": "**Metoda logowania:** {service}",
+<<<<<<< HEAD
+=======
+  "admin.user_item.confirmDemoteDescription": "Jeśli zrezygnujesz z roli administratora systemu i nie ma innego użytkownika z uprawnieniami administratora systemu, musisz ponownie przypisać administratora systemu, uzyskując dostęp do serwera Mattermost za pośrednictwem terminala i uruchamiając następujące polecenie.",
+  "admin.user_item.confirmDemoteRoleTitle": "Potwierdź zdegradowanie z roli administratora systemu",
+  "admin.user_item.confirmDemotion": "Potwierdź degradację",
+  "admin.user_item.confirmDemotionCmd": "platform roles system_admin {username}",
+>>>>>>> translations PR 20190314 (#2503)
   "admin.user_item.emailTitle": "**Email:** {email}",
   "admin.user_item.inactive": "Nieaktywny",
   "admin.user_item.makeActive": "Aktywuj",
@@ -1495,7 +1581,10 @@
   "admin.user_item.manageTeams": "Zarządzaj Zespołami",
   "admin.user_item.manageTokens": "Zarządzaj tokenami",
   "admin.user_item.member": "Użytkownik",
+<<<<<<< HEAD
   "admin.user_item.menuAriaLabel": "User Actions Menu",
+=======
+>>>>>>> translations PR 20190314 (#2503)
   "admin.user_item.mfaNo": "**MFA**: wyłączone",
   "admin.user_item.mfaYes": "**MFA**: włączone",
   "admin.user_item.resetEmail": "Zaktualizuj Email",
@@ -1555,20 +1644,28 @@
   "analytics.team.title": "Statystyki zespołu dla {team}",
   "analytics.team.totalPosts": "Wiadomości razem",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "analytics.team.totalUsers": "Ogólna aktywność użytkowników",
 =======
   "analytics.team.totalUsers": "Miesięczna Aktywność Użytkowników",
 >>>>>>> translations PR 20190225 (#2408)
+=======
+  "analytics.team.totalUsers": "Ogólna aktywność użytkowników",
+>>>>>>> translations PR 20190314 (#2503)
   "announcement_bar.error.email_verification_required": "Sprawdź swoją skrzynkę email w celu weryfikacji adresu.",
   "announcement_bar.error.license_expired": "Licencja Enterprise wygasła i niektóre funkcje zostały wyłączone. [Proszę odnów](!{link}).",
   "announcement_bar.error.license_expiring": "Licencja Enterprise wygasa {date, date, long}. [Proszę odnów ją](!{link}).",
   "announcement_bar.error.past_grace": "Licencja Enterprise wygasła i niektóre funkcje zostały wyłączone. Skontaktuj się z Administratorem.",
   "announcement_bar.error.preview_mode": "Tryb Podglądu: Powiadomienia email nie zostały skonfigurowane",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "announcement_bar.error.site_url_gitlab.full": "Skonfiguruj swój [Adres URL](https://docs.mattermost.com/administration/config-settings.html#site-url) w [Konsoli systemowej](/admin_console/general/configuration).",
 =======
   "announcement_bar.error.site_url_gitlab.full": "Skonfiguruj swój [Adres URL](https://docs.mattermost.com/administration/config-settings.html#site-url) w [Konsoli Systemowej](/admin_console/general/configuration).",
 >>>>>>> translations PR 20190225 (#2408)
+=======
+  "announcement_bar.error.site_url_gitlab.full": "Skonfiguruj swój [Adres URL](https://docs.mattermost.com/administration/config-settings.html#site-url) w [Konsoli systemowej](/admin_console/general/configuration).",
+>>>>>>> translations PR 20190314 (#2503)
   "announcement_bar.error.site_url.full": "Skonfiguruj swój [Adres URL](https://docs.mattermost.com/administration/config-settings.html#site-url) w [Konsoli Systemowej](/admin_console/general/configuration).",
   "announcement_bar.notification.email_verified": "E-Mail został zweryfikowany",
   "api.channel.add_member.added": "{addedUsername} został dodany do kanału przez {username}",
@@ -1726,8 +1823,12 @@
   "channel_header.directchannel.you": "{displayname} (Ty) ",
   "channel_header.flagged": "Oznaczone Wiadomości",
   "channel_header.leave": "Opuść Kanał",
+<<<<<<< HEAD
   "channel_header.manageMembers": "Zarządzaj użytkownikami",
   "channel_header.menuAriaLabel": "Channel Menu",
+=======
+  "channel_header.manageMembers": "Zarządzaj Użytkownikami",
+>>>>>>> translations PR 20190314 (#2503)
   "channel_header.mute": "Wycisz kanał",
   "channel_header.pinnedPosts": "Przypięte Wiadomości",
   "channel_header.recentMentions": "Ostatnie Wzmianki",
@@ -1780,11 +1881,16 @@
   "channel_modal.purposeEx": "Np: \"Kanał do zgłaszania bugów i usprawnień\"",
   "channel_modal.type": "Typ",
   "channel_notifications.allActivity": "Dla wszystkich aktywności",
+<<<<<<< HEAD
   "channel_notifications.globalDefault": "Global default",
   "channel_notifications.ignoreChannelMentions": "Ignoruj wzmianki dla @channel, @here i @all",
   "channel_notifications.ignoreChannelMentions.help": "When enabled, @channel, @here and @all will not trigger mentions or mention notifications in this channel.",
   "channel_notifications.ignoreChannelMentions.off.title": "Wył.",
   "channel_notifications.ignoreChannelMentions.on.title": "Wł.",
+=======
+  "channel_notifications.globalDefault": "Globalna wartość domyślna ({notifyLevel})",
+  "channel_notifications.ignoreChannelMentions": "Ignoruj wzmianki dla @channel, @here i @all",
+>>>>>>> translations PR 20190314 (#2503)
   "channel_notifications.muteChannel.help": "Wyciszenie wyłącza powiadomienia na dla aplikacji desktopowej, email oraz powiadomień push dla tego kanału. Kanał nie zostanie oznaczony jako nieprzeczytany, chyba że wspomniano o Tobie.",
   "channel_notifications.muteChannel.off.title": "Wył.",
   "channel_notifications.muteChannel.on.title": "Wł.",
@@ -1819,6 +1925,10 @@
   "claim.email_to_oauth.ssoType": "Po założeniu konta, będziesz mógł się zalogować tylko przez {type} SSO",
   "claim.email_to_oauth.switchTo": "Przełącz konto na {uiType}",
   "claim.email_to_oauth.title": "Przełącz konto Email/hasło na {uiType}",
+<<<<<<< HEAD
+=======
+  "claim.ldap_to_email.confirm": "Potwierdź hasło",
+>>>>>>> translations PR 20190314 (#2503)
   "claim.ldap_to_email.email": "Po zmianie metody autoryzacji, będziesz musiał użyć swojego {email} do zalogowania. Twoje dane logowania AD/LDAP nie będą pozwalały uzyskać dostępu do Mattermost.",
   "claim.ldap_to_email.enterLdapPwd": "{ldapPassword}:",
   "claim.ldap_to_email.enterPwd": "Nowe hasło logowania E-Mail:",
@@ -1844,6 +1954,7 @@
   "combined_system_message.added_to_team.two": "{firstUser} i {secondUser} zostali **dodani do zespołu** przez {actor}.",
   "combined_system_message.joined_channel.many_expanded": "{users} i {lastUser} **dołączyli do kanału**.",
   "combined_system_message.joined_channel.one": "{firstUser} **dołączył do kanału**.",
+<<<<<<< HEAD
   "combined_system_message.joined_channel.one_you": "Ty **dołączyłeś do kanału**.",
   "combined_system_message.joined_channel.two": "{firstUser} i {secondUser} **dołączyli do kanału**.",
   "combined_system_message.joined_team.many_expanded": "{users} i {lastUser} **dołączyli do zespołu**.",
@@ -1857,6 +1968,17 @@
   "combined_system_message.left_team.many_expanded": "{users} i {lastUser} **opuścili zespół**.",
   "combined_system_message.left_team.one": "{firstUser} **opuścił zespół**.",
   "combined_system_message.left_team.one_you": "Ty **opuściłeś zespół**.",
+=======
+  "combined_system_message.joined_channel.two": "{firstUser} i {secondUser} **dołączyli do kanału**.",
+  "combined_system_message.joined_team.many_expanded": "{users} i {lastUser} **dołączyli do zespołu**.",
+  "combined_system_message.joined_team.one": "{firstUser} **dołączył do zespołu**.",
+  "combined_system_message.joined_team.two": "{firstUser} i {secondUser} **dołączyli do zespołu**.",
+  "combined_system_message.left_channel.many_expanded": "{users} i {lastUser} **opuścili kanał**.",
+  "combined_system_message.left_channel.one": "{firstUser} **opuścił kanał**.",
+  "combined_system_message.left_channel.two": "{firstUser} i {secondUser} **opuścili kanał**.",
+  "combined_system_message.left_team.many_expanded": "{users} i {lastUser} **opuścili zespół**.",
+  "combined_system_message.left_team.one": "{firstUser} **opuścił zespół**.",
+>>>>>>> translations PR 20190314 (#2503)
   "combined_system_message.left_team.two": "{firstUser} i {secondUser} **opuścili zespół**.",
   "combined_system_message.removed_from_channel.many_expanded": "{users} i {lastUser} zostali **usunięci z kanału**.",
   "combined_system_message.removed_from_channel.one": "{firstUser} został **usunięty z kanału**.",
@@ -1893,7 +2015,11 @@
   "create_post.tutorialTip.title": "Wyślij wiadomość",
   "create_post.tutorialTip1": "Wpisz tutaj swoją wiadomość i naciśnij **Enter** aby ją wysłać.",
   "create_post.tutorialTip2": "Naciśnij przycisk **Załącznik** aby wrzucić obrazek lub plik.",
+<<<<<<< HEAD
   "create_post.write": "Write to {channelDisplayName}",
+=======
+  "create_post.write": "Napisz wiadomość...",
+>>>>>>> translations PR 20190314 (#2503)
   "create_team.agreement": "Kontynuując proces tworzenia konta i korzystania z {siteName}, akceptujesz nasze [Warunki korzystania z usługi] ({TermsOfServiceLink}) i [Polityka prywatności] ({PrivacyPolicyLink}). Jeśli nie wyrażasz zgody, nie możesz używać {siteName}.",
   "create_team.display_name.charLength": "Nazwa musi zawierać pomiędzy {min} a {max} znaków. Możesz dodać dłuższy opis zespołu później.",
   "create_team.display_name.nameHelp": "Nazwij swój zespół w dowolnym języku. Nazwa twojej drużyny pokazuje się w menu i nagłówkach.",
@@ -1999,6 +2125,10 @@
   "emoji_picker.people": "Ludzie",
   "emoji_picker.places": "Miejsca",
   "emoji_picker.recent": "Ostatnio Używane",
+<<<<<<< HEAD
+=======
+  "emoji_picker.search": "Wyszukaj Emoji",
+>>>>>>> translations PR 20190314 (#2503)
   "emoji_picker.search_emoji": "Szukaj konkretnego emoji",
   "emoji_picker.searchResults": "Wyniki Wyszukiwania",
   "emoji_picker.symbols": "Symbole",
@@ -2056,6 +2186,10 @@
   "flag_post.unflag": "Usuń flagę",
   "general_tab.allowedDomains": "Zezwalaj tylko użytkownikom z określoną domeną email do dołączenia do tego zespołu",
   "general_tab.allowedDomainsEdit": "Naciśnij \"Edytuj\" aby dodać domenę e-mail do białej listy.",
+<<<<<<< HEAD
+=======
+  "general_tab.AllowedDomainsExample": "corp.mattermost.com, mattermost.org",
+>>>>>>> translations PR 20190314 (#2503)
   "general_tab.AllowedDomainsInfo": "Zespoły i konta użytkowników mogą być tworzone jedynie dla maili z wybranej domeny (np. \"mattermost.org\") lub listy domen oddzielonej przecinkami (np. \"corp.mattermost.com, mattermost.org\").",
   "general_tab.chooseDescription": "Proszę wybrać nową nazwę dla twojego zespołu",
   "general_tab.codeDesc": "Kliknij przycisk \"Edytuj\", aby regenerować kod zaproszenia.",
@@ -2087,7 +2221,10 @@
   "generic_icons.arrow.down": "Ikona Strzałki w Dół",
   "generic_icons.attach": "Ikona Załącznika",
   "generic_icons.back": "Ikona Powrotu",
+<<<<<<< HEAD
   "generic_icons.bot": "Bot Icon",
+=======
+>>>>>>> translations PR 20190314 (#2503)
   "generic_icons.breadcrumb": "Ikona Breadcrumb",
   "generic_icons.channel.draft": "Ikona szablonu kanału",
   "generic_icons.channel.private": "Ikona Kanału Prywatnego",
@@ -2140,6 +2277,7 @@
   "get_team_invite_link_modal.help": "Wyślij członkom zespołu poniższy odnośnik aby umożliwić im rejestrację w zespole. Poniższy odnośnik może być dzielony z wieloma członkami zespołu, gdyż nie ulega zmianie, chyba że jest regenerowany w ustawieniach zespołu przez Administratora zespołu.",
   "get_team_invite_link_modal.helpDisabled": "Tworzenie użytkowników zostało zablokowane w twoim zespole. Proszę zapytać Administratora Zespołu o szczegóły.",
   "get_team_invite_link_modal.title": "Link zapraszający do zespołu",
+<<<<<<< HEAD
   "help.attaching.downloading.description": "Pobierz załączony plik, klikając ikonę pobierania obok miniatury plików lub otwierając podgląd pliku i klikając przycisk **Pobierz**.",
   "help.attaching.downloading.title": "Downloading Files",
   "help.attaching.dragdrop.description": "Prześlij plik lub zaznaczone pliki, przeciągając je z pulpitu/folderu do prawego paska bocznego lub środkowego panelu. Przeciąganie i upuszczanie przywiązuje pliki do pola wprowadzania wiadomości, a następnie można opcjonalnie wpisać wiadomość i nacisnąć **ENTER**, aby opublikować.",
@@ -2190,13 +2328,48 @@
   "help.composing.title": "Wyślij wiadomość",
   "help.composing.types.description": "Odpowiadaj na wiadomości aby pozostawić konwersacje zorganizowane w wątkach.",
   "help.composing.types.title": "Message Types",
+=======
+  "gif_picker.gfycat": "Szukaj Gfycat",
+  "help.attaching.downloading": "#### Pobieranie Plików\nPobierz załączony plik, klikając ikonę pobierania obok miniatury plików lub otwierając podgląd pliku i klikając przycisk **Pobierz**.",
+  "help.attaching.dragdrop": "#### Przeciągnij i upuść\nPrześlij plik lub zaznaczone pliki, przeciągając je z pulpitu/folderu do prawego paska bocznego lub środkowego panelu. Przeciąganie i upuszczanie przywiązuje pliki do pola wprowadzania wiadomości, a następnie można opcjonalnie wpisać wiadomość i nacisnąć **ENTER**, aby opublikować.",
+  "help.attaching.icon": "#### Ikona załącznika\nAlternatywnie, wysyłaj pliki poprzez kliknięcie ikony szarego spinacza wewnątrz pola tekstowego wiadomości. Otworzy to systemowy eksplorator plików gdzie możesz nawigować do docelowego pliku i wybraż **Otwórz** aby wysłać pliki do pola tekstowego wiadomości. Opcjonalnie wpisz wiadomość i wciśnij **ENTER** aby wysłać.",
+  "help.attaching.limitations": "## Limit rozmiaru pliku\nMattermost wspiera maksymalnie pięć załączonych plików do jednej wiadomości, każdy z nich maksymalnie po 50Mb.",
+  "help.attaching.methods": "## Metody załączania plików\nZałącz plik za pomocą przeciągania i upuszczania lub klikając ikonę załącznika w polu wprowadzania wiadomości.",
+  "help.attaching.notSupported": "Podgląd dokumentów (Word, Excel, PPT) nie jest obecnie wspierany.",
+  "help.attaching.pasting": "#### Wklejanie Obrazów\nW Chrome i w przeglądarce Edge można również wgrywać pliki poprzez wklejanie ich ze schowka. Nie jest to aktualnie obsługiwane w innych przeglądarkach.",
+  "help.attaching.previewer": "## Podgląd plików \nMattermost posiada wbudowany podgląd plików, który służy do przeglądania plików multimedialnych, pobierania plików i udostępniania linków publicznych. Kliknij miniaturkę dołączonego pliku, aby ją otworzyć w podglądzie plików.",
+  "help.attaching.publicLinks": "#### Udostępnianie linków publicznych \nPubliczne linki pozwalają udostępniać załączniki plików osobom spoza zespołu Mattermost. Otwórz przeglądarkę plików, klikając miniaturę załącznika, a następnie kliknij **Pobierz link publiczny**. Spowoduje to otwarcie okna dialogowego z linkiem do skopiowania. Gdy link jest udostępniany i otwierany przez innego użytkownika, plik zostanie automatycznie pobrany.",
+  "help.attaching.publicLinks2": "Jeśli **Pobierz link publiczny*** nie jest widoczny w przeglądarce plików i wolisz włączoną funkcję, możesz poprosić administratora systemu o włączenie funkcji z konsoli systemowej w sekcji **Bezpieczeństwo**> **Linki publiczne**.",
+  "help.attaching.supported": "#### Obsługiwane formaty plików multimedialnych \nJeśli próbujesz wyświetlić podgląd pliku multimedialnego, który nie jest obsługiwany, przeglądarka plików otworzy standardową ikonę załącznika mediów. Obsługiwane formaty plików multimedialnych zależą od przeglądarki i systemu operacyjnego, ale w większości przeglądarek obsługiwane są przez Mattermost następujące formaty:",
+  "help.attaching.supportedList": "- Zdjęcia: BMP, GIF, JPG, JPEG, PNG\n- Wideo: MP4\n- Audio: MP3, M4A\n- Dokumenty: PDF",
+  "help.attaching.title": "# Dołączanie plików\n_____",
+  "help.commands.builtin": "## Wbudowane polecenia\nPoniższe komendy są dostępne we wszystkich instalacjach Mattermost:",
+  "help.commands.builtin2": "Zacznij od wpisania `/`, a obok pola wprowadzania tekstu pojawi się lista poleceń. Propozycje pomagają dostarczyć przykładowy format w czarnym tekście i krótki opis komendy w szarym tekście.",
+  "help.commands.custom": "## Niestandardowe Polecenia\nNiestandardowe Polecenia po ukośniku, integrują się z aplikacjami zewnętrznymi. Na przykład zespół może skonfigurować niestandardowe polecenie po ukośniku, aby sprawdzić wewnętrzne rekordy zdrowia za pomocą `/pacjent joe smith` lub sprawdzić tygodniową prognozę pogody w mieście `/weather toronto tydzień`. Sprawdź z twoim Administratorem Systemu lub otwórz listę autouzupełniania wpisując `/`, aby określić, czy Twój zespół skonfigurował niestandardowe polecenia po ukośniku.",
+  "help.commands.custom2": "Niestandardowe komendy po ukośniku są domyślnie wyłączone i mogą zostać włączone przez Administratora Systemu w **Konsola systemowa** > **Integracje** > **Webhooki i Komendy**. Dowiedz się więcej o konfigurowaniu niestandardowych poleceń po ukośniku w [strona dokumentacji komend po ukośniku dla programisty](http://docs.mattermost.com/developer/slash-commands.html).",
+  "help.commands.intro": "Komendy po ukośniku wykonują w Mattermost operacje poprzez wpisanie w polu wprowadzania tekstu. Wpisz `/`, a następnie polecenie i kilka argumentów, aby wykonać akcje. \n\nWbudowane komendy slash dostarczane są ze wszystkimi instalacjami Mattermost, a niestandardowe polecenia po ukośniku są konfigurowalne do interakcji z zewnętrznymi aplikacjami. Dowiedz się więcej o konfigurowaniu niestandardowych poleceń po ukośniku na [strona dokumentacji komend po ukośniku dla programisty](http://docs.mattermost.com/developer/slash-commands.html).",
+  "help.commands.title": "# Wykonywanie poleceń\n___",
+  "help.composing.deleting": "## Usuwanie wiadomości\nUsuń wiadomość, klikając ikonę **[...]** obok dowolnego tekstu wiadomości, którą stworzysz, a następnie kliknij przycisk **Usuń**. Administratorzy Systemów i Zespołów mogą usuwać dowolną wiadomość z ich systemu lub zespołu.",
+  "help.composing.editing": "## Edytowanie wiadomości\nEdytuj wiadomość, klikając ikonę **[...]** obok dowolnego tekstu wiadomości, a następnie kliknij **Edytuj**. Po dokonaniu modyfikacji tekstu wiadomości naciśnij **ENTER**, aby zapisać zmiany. Edycja wiadomości nie uruchamiają powiadomień nowych @wspomnień, powiadomień na pulpicie ani dźwięków powiadomień.",
+  "help.composing.linking": "## Łączenie z wiadomością\nFunkcja **Odnośnik Bezpośredni** tworzy łącze do dowolnej wiadomości. Udostępnienie tego linku innym użytkownikom kanału pozwala wyświetlić powiązaną wiadomość w Archiwum Wiadomości. Użytkownicy, którzy nie są członkami kanału, na którym wiadomość została opublikowana, nie mogą wyświetlić linku bezpośredniego. Pobierz link bezpośredni do dowolnej wiadomości, klikając ikonę **[...]** obok tekstu wiadomości> **Odnośnik Bezpośredni**> **Kopiuj Link**.",
+  "help.composing.posting": "## Wysyłanie wiadomości \nNapisz wiadomość, wpisując ją w polu tekstowym, a następnie naciśnij klawisz ENTER, aby ją wysłać. Użyj klawiszy SHIFT+ENTER, aby utworzyć nową linię bez wysyłania wiadomości. Aby wysłać wiadomości, naciskając klawisze CTRL+ENTER, przejdź do **Menu główne > Ustawienia konta > Wysyłaj wiadomości przez CTRL+ENTER**.",
+  "help.composing.posts": "#### Wiadomości\nPosty można uznać za wiadomości nadrzędne. Są to wiadomości, które często rozpoczynają wątek odpowiedzi. Posty są tworzone i wysyłane z pola wprowadzania tekstu na dole środkowego panelu.",
+  "help.composing.replies": "#### Odpowiedzi \nOdpowiedz na wiadomość, klikając ikonę odpowiedzi obok dowolnego tekstu. To działanie otwiera pasek boczny po prawej stronie, w którym możesz zobaczyć wątek wiadomości, a następnie skomponować i wysłać odpowiedź. Odpowiedzi są nieco wcięte w środkowym panelu, aby wskazać, że są to wiadomości podrzędne. \n\nPodczas tworzenia odpowiedzi po prawej stronie kliknij ikonę rozwijania/zwijania za pomocą dwóch strzałek u góry paska bocznego, aby ułatwić czytanie.",
+  "help.composing.title": "# Wysyłanie wiadomości\n_____",
+  "help.composing.types": "## Typy wiadomości\nOdpowiadaj do wiadomości aby pozostawić konwersacje zorganizowane w wątkach.",
+>>>>>>> translations PR 20190314 (#2503)
   "help.formatting.checklist": "Zrób listę zadań poprzez użycie nawiasów kwadratowych:",
   "help.formatting.checklistExample": "- [ ] Pierwsza pozycja\n- [ ] Druga pozycja\n- [x] Zakończona pozycja",
   "help.formatting.code.description": "Utwórz blok kodu poprzez rozpoczęcie każdej linii 4 spacjami, lub poprzez wstawienie ``` w linii przed początkiem bloku kodu i po zakończeniu kodu źródłowego (w jednej wiadomości).",
   "help.formatting.code.title": "Blok kodu",
   "help.formatting.codeBlock": "Blok kodu",
+<<<<<<< HEAD
   "help.formatting.emojis.description": "Otwórz auto uzupełnianie Emoji, wpisując `:`. Pełną listę emoji można znaleźć [tutaj] (http://www.emoji-cheat-sheet.com/). Możliwe jest również utworzenie własnego [Niestandardowe Emoji] (http://docs.mattermost.com/help/settings/custom-emoji.html), jeśli Emoji, której chcesz używać nie istnieje.",
   "help.formatting.emojis.title": "Emoji",
+=======
+  "help.formatting.emojiExample": ":smile: :+1: :sheep:",
+  "help.formatting.emojis": "## Emoji \n\nOtwórz autouzupełnianie emotikon, wpisując `:`. Pełną listę emotikon można znaleźć [tutaj] (http://www.emoji-cheat-sheet.com/). Możliwe jest również utworzenie własnego [Niestandardowe emotikony] (http://docs.mattermost.com/help/settings/custom-emoji.html), jeśli emotikona, której chcesz używać nie istnieje.",
+>>>>>>> translations PR 20190314 (#2503)
   "help.formatting.example": "Przykład:",
   "help.formatting.githubTheme": "**GitHub Theme**",
   "help.formatting.headings.description": "Utwórz nagłówek, wpisując # i spację przed tytułem. W przypadku mniejszych nagłówków użyj więcej #.",
@@ -2204,6 +2377,7 @@
   "help.formatting.headings2": "Alternatywnie można podkreślić tekst za pomocą `===` lub `---`, aby utworzyć nagłówki.",
   "help.formatting.headings2Example": "Duży nagłówek\n-------------",
   "help.formatting.headingsExample": "## Duży nagłówek\n### Mniejszy nagłówek\n#### Jeszcze mniejszy nagłówek",
+<<<<<<< HEAD
   "help.formatting.images.description": "Twórz obrazki w jednej linii używając `!` następnie alternatywny tekst w kwadratowych nawiasach i linku w normalnych nawiasach. Dodaj tekst podświetlający dodając cudzysłowy po linku.",
   "help.formatting.images.title": "In-line Images",
   "help.formatting.imagesExample": "![alternatywny tekst](link \"tekst podświetlający\")\n\ni\n\n[![Stan buildu](https://travis-ci.org/mattermost/mattermost-server.svg?branch=master)](https://travis-ci.org/mattermost/mattermost-server) [![Github](https://assets-cdn.github.com/favicon.ico)](https://github.com/mattermost/mattermost-server)",
@@ -2215,6 +2389,15 @@
   "help.formatting.linkEx": "[Wypróbuj Mattermost!](https://about.mattermost.com/)",
   "help.formatting.links.description": "Twórz oznaczone linki, umieszczając żądany tekst w nawiasach kwadratowych i powiązanym odnośniku w normalnych nawiasach.",
   "help.formatting.links.title": "Links",
+=======
+  "help.formatting.images": "## Obrazki w jednej lini\n\nTwórz obrazki w jednej linii używając `!` następnie alternatywny tekst w kwadratowych nawiasach i linku w normalnych nawiasach. Dodaj tekst podświetlający dodając cudzysłowy po linku.",
+  "help.formatting.imagesExample": "![alternatywny tekst](link \"tekst podświetlający\")\n\ni\n\n[![Stan buildu](https://travis-ci.org/mattermost/mattermost-server.svg?branch=master)](https://travis-ci.org/mattermost/mattermost-server) [![Github](https://assets-cdn.github.com/favicon.ico)](https://github.com/mattermost/mattermost-server)",
+  "help.formatting.inline": "## Kod w jednej lini\n\nUtwórz wbudowaną czcionkę o stałej szerokości, otaczając ją odskokami(`).",
+  "help.formatting.intro": "Markdown ułatwia formatowanie wiadomości. Wpisz wiadomość tak, jak zwykle, i użyj tych reguł, aby wyświetlać ją ze specjalnym formatowaniem.",
+  "help.formatting.lines": "## Linie \n\nUtwórz linię, używając trzech `*`, `_` lub` -`.",
+  "help.formatting.linkEx": "[Wypróbuj Mattermost!](https://about.mattermost.com/)",
+  "help.formatting.links": "## Linki\n\nTwórz oznaczone linki, umieszczając żądany tekst w nawiasach kwadratowych i powiązanym odnośniku w normalnych nawiasach.",
+>>>>>>> translations PR 20190314 (#2503)
   "help.formatting.listExample": "* pierwsza pozycja \n* druga pozycja \n    * podpunkt",
   "help.formatting.lists.description": "Utwórz listę za pomocą `*` lub `-` jako punkty. Wcięcie podpunkt dodając dwie spacje przed nim.",
   "help.formatting.lists.title": "Lists",
@@ -2228,6 +2411,7 @@
   "help.formatting.renders": "Wyświetli się:",
   "help.formatting.solirizedDarkTheme": "**Solarized Dark Theme**",
   "help.formatting.solirizedLightTheme": "**Solarized Light Theme**",
+<<<<<<< HEAD
   "help.formatting.style.description": "You can use either `_` or `*` around a word to make it italic. Use two to make it bold.",
   "help.formatting.style.listItem1": "`_italics_` renders as _italics_",
   "help.formatting.style.listItem2": "`**bold**` renders as **bold**",
@@ -2238,6 +2422,12 @@
   "help.formatting.syntax.description": "Aby dodać podświetlanie składni, wpisz język, który ma być podświetlony po znakach ``` na początku bloku kodu. Mattermost oferuje również cztery różne motywy kodu (GitHub, Solarized Dark, Solarized Light, Monokai), które można zmienić w **Ustawienia konta ** > **Wyświetlanie** > **Motyw** > **Niestandardowy motyw** > **Wyśrodkuj style kanałów**",
   "help.formatting.syntax.title": "Syntax Highlighting",
   "help.formatting.syntaxEx": "```go\npackage main\nimport \"fmt\"\nfunc main() \\{\n    fmt.Println(\"Hello, 世界\")\n\\}\n```",
+=======
+  "help.formatting.style": "## Style Tekstu\n\nMożesz użyć `_` albo `*` wokół słowa, aby tekst był pochylony. Dwa znaki to pogrubienie.\n\n* `_pochylony_` wyświetla tekst jako _pochylony_\n* `**pogrubiony**` wyświetla tekst jako **pogrubiony**\n* `**_pogrubiony-pochylony_**` wyświetla tekst jako **_pogrubiony-pochylony_**\n* `~~przekreślony~~` wyświetla tekst jako ~~przekreślony~~",
+  "help.formatting.supportedSyntax": "Obsługiwane języki to:\n`as`, `applescript`, `osascript`, `scpt`, `bash`, `sh`, `zsh`, `clj`, `boot`, `cl2`, `cljc`, `cljs`, `cljs.hl`, `cljscm`, `cljx`, `hic`, `coffee`, `_coffee`, `cake`, `cjsx`, `cson`, `iced`, `cpp`, `c`, `cc`, `h`, `c++`, `h++`, `hpp`, `cs`, `csharp`, `css`, `d`, `di`, `dart`, `delphi`, `dpr`, `dfm`, `pas`, `pascal`, `freepascal`, `lazarus`, `lpr`, `lfm`, `diff`, `django`, `jinja`, `dockerfile`, `docker`, `erl`, `f90`, `f95`, `fsharp`, `fs`, `gcode`, `nc`, `go`, `groovy`, `handlebars`, `hbs`, `html.hbs`, `html.handlebars`, `hs`, `hx`, `java`, `jsp`, `js`, `jsx`, `json`, `jl`, `kt`, `ktm`, `kts`, `less`, `lisp`, `lua`, `mk`, `mak`, `md`, `mkdown`, `mkd`, `matlab`, `m`, `mm`, `objc`, `obj-c`, `ml`, `perl`, `pl`, `php`, `php3`, `php4`, `php5`, `php6`, `ps`, `ps1`, `pp`, `py`, `gyp`, `r`, `ruby`, `rb`, `gemspec`, `podspec`, `thor`, `irb`, `rs`, `scala`, `scm`, `sld`, `scss`, `st`, `styl`, `sql`, `swift`, `tex`, `vbnet`, `vb`, `bas`, `vbs`, `v`, `veo`, `xml`, `html`, `xhtml`, `rss`, `atom`, `xsl`, `plist`, `yaml`",
+  "help.formatting.syntax": "### Podświetlanie składni\n\nAby dodać podświetlanie składni, wpisz język, który ma być podświetlony po znakach ``` na początku bloku kodu. Mattermost oferuje również cztery różne motywy kodu (GitHub, Solarized Dark, Solarized Light, Monokai), które można zmienić w **Ustawienia Konta ** > **Wyświetlanie** > **Motyw** > **Niestandardowy Motyw** > **Wyśrodkuj Style Kanałów**",
+  "help.formatting.syntaxEx": "    package main\n    import \"fmt\"\n    func main() {\n        fmt.Println(\"Hello, 世界\")\n    }",
+>>>>>>> translations PR 20190314 (#2503)
   "help.formatting.tableExample": "| Wyrównaj do lewej  | Wyśrodkowanie  | Wyrównaj do prawej |\n| :------------ |:---------------:| -----:|\n| Lewa kolumna 1 | ten tekst       |  $100 |\n| Lewa kolumna 2 | jest              |   $10 |\n| Lewa kolumna 3 | wyśrodkowany        |    $1 |",
   "help.formatting.tables.description": "Utwórz tabelę, umieszczając przerywaną linię pod wierszem nagłówka i rozdzielając kolumny za pomocą potoku `|`. (Kolumny nie muszą być ustawione dokładnie w szeregu, aby działały). Wybierz sposób wyrównywania kolumn tabeli, dodając dwukropki `:` w wierszu nagłówka.",
   "help.formatting.tables.title": "Tabela",
@@ -2252,6 +2442,7 @@
   "help.mentioning.channel.description": "Możesz wymienić cały kanał, wpisując '@channel'. Wszyscy członkowie kanału otrzymają powiadomienie o wzmiance, które zachowuje się tak samo, jakby członkowie zostali wymienieni osobiście.",
   "help.mentioning.channel.title": "Kanał",
   "help.mentioning.channelExample": "@kanał świetna praca nad wywiadami w tym tygodniu. Myślę, że znaleźliśmy znakomitych potencjalnych kandydatów!",
+<<<<<<< HEAD
   "help.mentioning.mentions.description": "Użyj @mentions, aby zwrócić uwagę konkretnych członków zespołu.",
   "help.mentioning.mentions.title": "@Mentions",
   "help.mentioning.recent.description": "Kliknij `@` obok pola wyszukiwania, aby zapytać o najnowsze @mentions i słowa, które wyzwalają wzmianki. Kliknij **Skocz** obok wyniku wyszukiwania na prawym pasku bocznym, aby przeskoczyć do środkowego panelu do kanału i lokalizacji wiadomości z wzmianką.",
@@ -2262,6 +2453,13 @@
   "help.mentioning.username.description1": "You can mention a teammate by using the `@` symbol plus their username to send them a mention notification.",
   "help.mentioning.username.description2": "Możesz wspomnieć o członku drużyny, używając symbolu `@` i jego nazwy użytkownika, aby wysłać im powiadomienie o wzmiance.Wpisz `@`, aby wyświetlić listę członków zespołu, o których można wspomnieć. Aby przefiltrować listę, wpisz kilka pierwszych liter dowolnej nazwy użytkownika, imienia, nazwiska lub pseudonimu. Klawisze ze strzałkami **Góra** i **Dół** mogą być używane do przewijania wpisów na liście, a naciśnięcie **ENTER** spowoduje wybranie użytkownika do wzmianki. Po wybraniu nazwa użytkownika automatycznie zastąpi imię i nazwisko lub pseudonim. Poniższy przykład wysyła powiadomienie o specjalnej wzmiance do **alice**, która informuje ją o kanale i wiadomości, w których została wspomniana. Jeśli **alice** jest z dala od Mattermost i ma włączone [powiadomienia emailowe](http://docs.mattermost.com/help/getting-started/configuring-notifications.html#email-notifications), to otrzyma powiadomienie email o jej wzmiance wraz z tekstem wiadomości.",
   "help.mentioning.username.title": "Nazwa użytkownika",
+=======
+  "help.mentioning.mentions": "## @Wzmianki\nUżyj @wzmianki, aby zwrócić uwagę konkretnych członków zespołu.",
+  "help.mentioning.recent": "## Najnowsze Wzmianki\nKliknij `@` obok pola wyszukiwania, aby zapytać o najnowsze @wzmianki i słowa, które wyzwalają wzmianki. Kliknij **Skocz** obok wyniku wyszukiwania na prawym pasku bocznym, aby przeskoczyć do środkowego panelu do kanału i lokalizacji wiadomości z wzmianką.",
+  "help.mentioning.title": "# Wzmianki kolegów z zespołu\n_____",
+  "help.mentioning.triggers": "## Słowa, Które Wyzwalają Wzmianki\nOprócz powiadomienia przez @użytkownik i @kanał, możesz dostosować słowa, które wywołują powiadomienia o wzmiankach w **Ustawienia Konta** > **Powiadomienia** > **Słowa, które wyzwalają wzmianki**. Domyślnie otrzymasz powiadomienia o imieniu i możesz dodać więcej słów, wpisując je w polu wprowadzania, oddzielając je przecinkami. Jest to przydatne, jeśli chcesz otrzymywać powiadomienia o wszystkich postach dotyczących określonych tematów, na przykład \"wywiady\" lub \"marketing\".",
+  "help.mentioning.username": "#### @Nazwa Użytkownika\nMożesz wspomnieć o członku drużyny, używając symbolu `@` i jego nazwy użytkownika, aby wysłać im powiadomienie o wzmiance.\n\nWpisz `@`, aby wyświetlić listę członków zespołu, o których można wspomnieć. Aby przefiltrować listę, wpisz kilka pierwszych liter dowolnej nazwy użytkownika, imienia, nazwiska lub pseudonimu. Klawisze ze strzałkami **Góra** i **Dół** mogą być używane do przewijania wpisów na liście, a naciśnięcie **ENTER** spowoduje wybranie użytkownika do wzmianki. Po wybraniu nazwa użytkownika automatycznie zastąpi imię i nazwisko lub pseudonim.\nPoniższy przykład wysyła powiadomienie o specjalnej wzmiance do **alice**, która informuje ją o kanale i wiadomości, w których została wspomniana. Jeśli **alice** jest z dala od Mattermost i ma włączone [powiadomienia emailowe](http://docs.mattermost.com/help/getting-started/configuring-notifications.html#email-notifications), to otrzyma powiadomienie email o jej wzmiance wraz z tekstem wiadomości.",
+>>>>>>> translations PR 20190314 (#2503)
   "help.mentioning.usernameCont": "Jeśli wspomniany użytkownik nie należy do kanału, Wiadomość Systemowa zostanie opublikowana, aby Cię powiadomić. Jest to tymczasowy komunikat widziany tylko przez osobę, która go uruchomiła. Aby dodać wspomnianego użytkownika do kanału, przejdź do menu rozwijanego obok nazwy kanału i wybierz **Dodaj członków**.",
   "help.mentioning.usernameExample": "@alice jak twoja rozmowa z nowym kandydatem?",
   "help.messaging.attach": "**Załączaj pliki** przeciągając je do Mattermost lub klikając na przycisk \"załącz plik\" w polu wprowadzania wiadomości.",
@@ -2352,9 +2550,12 @@
   "integrations.outgoingWebhook.description": "Wychodzące webhooki pozwalają zewnętrznym integracją otrzymywać wiadomości i na nie odpowiadać",
   "integrations.outgoingWebhook.title": "Wychodzący Webhook",
   "integrations.successful": "Konfiguracja pomyślna",
+<<<<<<< HEAD
   "interactive_dialog.cancel": "Anuluj",
   "interactive_dialog.element.optional": "(opcjonalne)",
   "interactive_dialog.submit": "Wyślij",
+=======
+>>>>>>> translations PR 20190314 (#2503)
   "interactive_dialog.submitting": "Dodawanie...",
   "intro_messages.anyMember": " Każdy użytkownik może dołączyć i przeczytać ten kanał.",
   "intro_messages.beginning": "Początek {name}",
@@ -2392,8 +2593,13 @@
   "invite_member.sending": " Wysyłanie",
   "invite_member.teamInviteLink": "Możesz także zaprosić ludzi podając im ten {link}.",
   "katex.error": "Nie można skompilować twojego kodu LaTeX. Sprawdź składnię i spróbuj ponownie.",
+<<<<<<< HEAD
   "last_users_message.added_to_channel.type": "zostało **dodanych do kanału** przez {actor}.",
   "last_users_message.added_to_team.type": "zostało **dodanych do zespołu** przez {actor}.",
+=======
+  "last_users_message.added_to_channel.type": "został **dodany do kanału** przez {actor}.",
+  "last_users_message.added_to_team.type": "został **dodany do zespołu** przez {actor}.",
+>>>>>>> translations PR 20190314 (#2503)
   "last_users_message.first": "{firstUser} i ",
   "last_users_message.joined_channel.type": "**dołączył do kanału**.",
   "last_users_message.joined_team.type": "**dołączył do zespołu**.",
@@ -2414,6 +2620,10 @@
   "login_mfa.enterToken": "Aby zakończyć procedurę logowania, proszę wpisać token uwierzytelniający z smartfonu",
   "login_mfa.submit": "Wyślij",
   "login_mfa.submitting": "Dodawanie...",
+<<<<<<< HEAD
+=======
+  "login_mfa.token": "MFA Token",
+>>>>>>> translations PR 20190314 (#2503)
   "login.changed": " Metoda logowania została zmieniona pomyślnie",
   "login.create": "Utwórz teraz",
   "login.createTeam": "Utwórz nowy zespół",
@@ -2454,16 +2664,22 @@
   "members_popover.title": "Członkowie kanału",
   "members_popover.viewMembers": "Wyświetl Użytkowników",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> translations PR 20190314 (#2503)
   "message_submit_error.invalidCommand": "Nie naleziono komendy '{command}'. ",
   "message_submit_error.sendAsMessageLink": "Kliknij tutaj, aby wysłać jako wiadomość.",
   "mfa.confirm.complete": "**Konfiguracja zakończona!**",
   "mfa.confirm.okay": "Okej",
+<<<<<<< HEAD
 =======
   "message_submit_error.invalidCommand": "Command with a trigger of '{command}' not found. ",
   "message_submit_error.sendAsMessageLink": "Click here to send as a message.",
   "mfa.confirm.complete": "**Set up complete!**",
   "mfa.confirm.okay": "OK",
 >>>>>>> translations PR 20190225 (#2408)
+=======
+>>>>>>> translations PR 20190314 (#2503)
   "mfa.confirm.secure": "Twoje konto jest teraz bezpieczne. Gdy następnym razem zalogujesz się, zostaniesz poproszony o podanie kodu z aplikacji Google Authenticator na telefonie.",
   "mfa.setup.badCode": "Zły kod. Jeśli problem nie ustąpi, skontaktuj się z administratorem systemu.",
   "mfa.setup.codeError": "Wprowadź kod z Google Authenticator.",
@@ -2548,12 +2764,20 @@
   "navbar_dropdown.leave.icon": "Ikona opuszczania zespołu",
   "navbar_dropdown.logout": "Wyloguj",
   "navbar_dropdown.manageMembers": "Zarządzaj Użytkownikami",
+<<<<<<< HEAD
   "navbar_dropdown.menuAriaLabel": "Menu główne",
+=======
+>>>>>>> translations PR 20190314 (#2503)
   "navbar_dropdown.nativeApps": "Pobierz aplikacje",
   "navbar_dropdown.report": "Zgłoś problem",
   "navbar_dropdown.switchTo": "Przejdź do ",
   "navbar_dropdown.teamLink": "Uzyskaj link zapraszający",
+<<<<<<< HEAD
   "navbar_dropdown.teamSettings": "Ustawienia zespołu",
+=======
+  "navbar_dropdown.teamSettings": "Opcje zespołu",
+  "navbar_dropdown.viewMembers": "Wyświetl użytkowników",
+>>>>>>> translations PR 20190314 (#2503)
   "navbar.addMembers": "Dodaj użytkowników",
   "navbar.click": "Kliknij tutaj",
   "navbar.clickToAddHeader": "{clickHere} aby dodać jeden.",
@@ -2615,6 +2839,10 @@
   "post_info.unpin": "Odepnij od kanału",
   "post_message_view.edited": "(edytowany)",
   "posts_view.loadMore": "Pobierz więcej wiadomości",
+<<<<<<< HEAD
+=======
+  "posts_view.maxLoaded": "Szukasz konkretnej wiadomości? Spróbuj ją wyszukać",
+>>>>>>> translations PR 20190314 (#2503)
   "posts_view.newMsg": "Nowe Wiadomości",
   "posts_view.newMsgBelow": "{count, plural, one {Nowa wiadomość} other {Nowe wiadomości}}",
   "quick_switch_modal.channels": "Kanały",
@@ -2701,7 +2929,10 @@
   "search_results.usagePin4": "Aby przypiąć wiadomość: Najedź na wiadomość, którą chcesz przypiąć i kliknij [...] > \"Przypnij do kanału\".",
   "select_team.icon": "Ikona wyboru zespołu",
   "select_team.join.icon": "Ikona dołączenia do zespołu",
+<<<<<<< HEAD
   "select_team.private.icon": "Utwórz zespół",
+=======
+>>>>>>> translations PR 20190314 (#2503)
   "setting_item_max.cancel": "Anuluj",
   "setting_item_min.edit": "Edycja",
   "setting_picture.cancel": "Anuluj",
@@ -2772,6 +3003,13 @@
   "sidebar_right_menu.console": "Konsola Systemowa",
   "sidebar_right_menu.flagged": "Oznaczone Wiadomości",
   "sidebar_right_menu.recentMentions": "Ostatnie Wzmianki",
+<<<<<<< HEAD
+=======
+  "sidebar_right_menu.report": "Zgłoś problem",
+  "sidebar_right_menu.teamLink": "Uzyskaj link zapraszający",
+  "sidebar_right_menu.teamSettings": "Opcje zespołu",
+  "sidebar_right_menu.viewMembers": "Wyświetl użytkowinków",
+>>>>>>> translations PR 20190314 (#2503)
   "sidebar.browseChannelDirectChannel": "Przeglądaj kanały i wiadomości bezpośrednie",
   "sidebar.createChannel": "Stwórz nowy kanał publiczny",
   "sidebar.createDirectMessage": "Utwórz nową bezpośrednią wiadomość",
@@ -2839,7 +3077,10 @@
   "status_dropdown.set_online": "Dostępny",
   "status_dropdown.set_ooo": "Poza Biurem",
   "status_dropdown.set_ooo.extra": "Automatyczne odpowiedzi są włączone",
+<<<<<<< HEAD
   "string.id": "default message",
+=======
+>>>>>>> translations PR 20190314 (#2503)
   "suggestion_list.no_matches": "Żadne rzeczy nie pasują do __{value}__",
   "suggestion.mention.all": "OSTRZEŻENIE: wspomina wszystkich na kanale",
   "suggestion.mention.channel": "Powiadamia wszystkich na kanale",
@@ -3050,7 +3291,10 @@
   "user.settings.general.emailSamlCantUpdate": "Logowanie odbywa się za pośrednictwem protokołu saml. E-mail nie może być zaktualizowany. Adres e-mail używany do powiadomień {email}.",
   "user.settings.general.emptyName": "Kliknij \"Edytuj\" by dodać swoje imię i nazwisko",
   "user.settings.general.emptyNickname": "Kliknij \"Edytuj\", aby dodać pseudonim",
+<<<<<<< HEAD
   "user.settings.general.emptyPassword": "Please enter your current password.",
+=======
+>>>>>>> translations PR 20190314 (#2503)
   "user.settings.general.emptyPosition": "Kliknij \"Edytuj\", aby dodać swój tytuł / stanowisko",
   "user.settings.general.field_handled_externally": "Wartość tego pola pobierana jest od Twojego dostawcy logowania. Jeśli chcesz je zmienić musisz to zgłosić do swojego dostawcy.",
   "user.settings.general.firstName": "Imię",
@@ -3069,10 +3313,14 @@
   "user.settings.general.mobile.emptyNickname": "Kliknij, aby dodać pseudonim",
   "user.settings.general.mobile.emptyPosition": "Kliknij, aby dodać swój tytuł / stanowisko",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "user.settings.general.mobile.uploadImage": "Kliknij aby wgrać obrazek.",
 =======
   "user.settings.general.mobile.uploadImage": "Kliknij przycisk 'Edytuj' aby załadować obraz",
 >>>>>>> translations PR 20190225 (#2408)
+=======
+  "user.settings.general.mobile.uploadImage": "Kliknij aby wgrać obrazek.",
+>>>>>>> translations PR 20190314 (#2503)
   "user.settings.general.newEmail": "Nowy e-mail",
   "user.settings.general.nickname": "Pseudonim",
   "user.settings.general.nicknameExtra": "Utwórz nazwę użytkownika, które może zostać wykorzystana do wywołania Cię. Nazwa musi się różnić od Twojego imienia i nazwiska.Wykorzystanie nazwy użytkownika może być przydatne w przypadku dwóch osób posiadających podobnie brzmiące imiona i nazwiska",
