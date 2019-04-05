@@ -1,0 +1,10 @@
+@charset 'UTF-8';
+
+body {
+  @include font-smoothing;
+  font-family: 'Lato', sans-serif;
+}
+
+.app__body.font--open_sans {
+  font-family: 'Lato', 'Open Sans', sans-serif;
+}
