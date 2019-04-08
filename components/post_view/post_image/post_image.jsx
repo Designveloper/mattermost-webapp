@@ -3,6 +3,8 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import {postListScrollChange} from 'actions/global_actions';
 import SizeAwareImage from 'components/size_aware_image';
 import LoadingImagePreview from 'components/loading_image_preview';
 import * as PostUtils from 'utils/post_utils.jsx';
@@ -91,6 +93,9 @@ export default class PostImageEmbed extends React.PureComponent {
             errored: false,
         });
 
+        if (!this.props.dimensions) {
+            postListScrollChange();
+        }
         if (this.props.onLinkLoaded) {
             this.props.onLinkLoaded();
         }
