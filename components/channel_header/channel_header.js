@@ -444,7 +444,25 @@ export default class ChannelHeader extends React.PureComponent {
                 >
                     {dmHeaderIconStatus}
                     {dmHeaderTextStatus}
-                    {editMessage}
+                    {popoverListMembers}
+                    <span className='separate-stroke'>|</span>
+                    <ChannelHeaderPlug
+                        channel={channel}
+                        channelMember={channelMember}
+                    />
+                    <HeaderIconWrapper
+                        iconComponent={
+                            <PinIcon
+                                className='icon icon__pin'
+                                aria-hidden='true'
+                            />
+                        }
+                        buttonClass={'style--none ' + 'channel-header__icon'}
+                        buttonId={'channelHeaderPinButton'}
+                        onClick={this.getPinnedPosts}
+                        tooltipKey={'pinnedPosts'}
+                    />
+                     {editMessage}
                 </div>
             );
         }
