@@ -78,7 +78,7 @@ export default function HeaderIconWrapper({
 
     if (tooltip) {
         return (
-            <div className='flex-child'>
+            <div className='flex-child flex-center'>
                 <OverlayTrigger
                     trigger={['hover', 'focus']}
                     delayShow={Constants.OVERLAY_TIME_DELAY}
