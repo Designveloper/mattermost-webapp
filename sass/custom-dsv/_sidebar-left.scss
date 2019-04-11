@@ -6,4 +6,21 @@
       font-size: 16px;
     }
   }
+  .nav li > h4 {
+    margin: 0.8em 0;
+    letter-spacing: 0.6px;
+  }
+  .icon {
+    margin-top: 2px;
+  }
+  .status .offline--icon, .app__body .sidebar--menu svg, .app__body .sidebar-item .icon {
+    fill: rgb(255, 255, 255);
+    opacity: 0.6;
+  }
+}
+.status {
+  top: 3px;
+  svg {
+  max-height: 16px;
+}
 }

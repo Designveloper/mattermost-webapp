@@ -2,6 +2,84 @@
 
 .post {
   p {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
+.app__body .post.current--user .post__body, .app__body .post.post--comment.other--root.current--user .post-comment, .app__body pre, .app__body .post-right__container .post.post--root {
+  background: transparent !important;
+  padding-left: 0;
+}
+.post .post__body {
+  padding-left: 0;
+}
+.post-create__container .custom-textarea.custom-textarea--emoji-picker {
+  padding-left: 43px;
+}
+  .icon--attachment {
+    position: absolute;
+    top: 2px;
+    width: 43px;
+    text-align: center;
+    vertical-align: center;
+    height: 43px;
+    opacity: 0.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transition: all 0.15s;
+    -webkit-transition-delay: 0s;
+    -moz-transition: all 0.15s;
+    -o-transition: all 0.15s;
+    cursor: pointer;
+    overflow: hidden;
+    input {
+      cursor: pointer;
+      direction: ltr;
+      filter: alpha(opacity=0);
+      font-size: 23px;
+      height: 100%;
+      margin: 0;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
+  .icon--attachment:hover {
+    opacity: 0.6;
+  }
+  .channel-header .channel-header__icon.wide,.channel-header .channel-header__icon {
+    width: 32px ;
+    margin: 0;
+    border: none;
+    height: 20px;
+    line-height: 20px;
+    .member-popover__trigger {
+      padding: 0;
+      margin-top: -2px;
+    }
+    .icon__text {
+      font-weight: 600;
+      margin-right: 4px;
+      position: relative;
+      margin-left: 4px;
+  }
+  }
+  .channel-header .flex-child .markdown__paragraph-inline {
+    margin-left: 8px;
+    color: #999c9f;
+  }
+  .channel-header__info .channel-header__description {
+    display: flex;
+  }
+  .separate-stroke {
+    color: #999c9f;
+  }
+  #channelHeaderPinButton {
+    min-width: 18px;
+    width: 18px;
+  }
+  .channel-intro {
+    padding-left: 2.8em;
+  }

@@ -371,6 +371,26 @@ export default class ChannelHeader extends React.PureComponent {
                     >
                         {dmHeaderIconStatus}
                         {dmHeaderTextStatus}
+                        {popoverListMembers}
+                    <span className='separate-stroke'>|</span>
+                    <ChannelHeaderPlug
+                        channel={channel}
+                        channelMember={channelMember}
+                    />
+                    <HeaderIconWrapper
+                        iconComponent={
+                            <PinIcon
+                                className='icon icon__pin'
+                                aria-hidden='true'
+                            />
+                        }
+                        buttonClass={'style--none ' + 'channel-header__icon'}
+                        buttonId={'channelHeaderPinButton'}
+                        onClick={this.getPinnedPosts}
+                        tooltipKey={'pinnedPosts'}
+                    />
+                    <span className='separate-stroke'>|</span>
+
                         <span onClick={Utils.handleFormattedTextClick}>
                             <Markdown
                                 message={headerText}
@@ -581,25 +601,7 @@ export default class ChannelHeader extends React.PureComponent {
                             {headerTextContainer}
                         </div>
                     </div>
-                    <div className='flex-child'>
-                        {popoverListMembers}
-                    </div>
-                    <ChannelHeaderPlug
-                        channel={channel}
-                        channelMember={channelMember}
-                    />
-                    <HeaderIconWrapper
-                        iconComponent={
-                            <PinIcon
-                                className='icon icon__pin'
-                                aria-hidden='true'
-                            />
-                        }
-                        buttonClass={'style--none ' + pinnedIconClass}
-                        buttonId={'channelHeaderPinButton'}
-                        onClick={this.getPinnedPosts}
-                        tooltipKey={'pinnedPosts'}
-                    />
+                    
                     {this.state.showSearchBar ? (
                         <div className='flex-child search-bar__container'>
                             <SearchBar

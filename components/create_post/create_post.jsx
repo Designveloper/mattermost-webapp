@@ -1224,11 +1224,11 @@ export default class CreatePost extends React.Component {
                                 badConnection={this.props.badConnection}
                                 listenForMentionKeyClick={true}
                             />
+                            {fileUpload}
                             <span
                                 ref='createPostControls'
                                 className='post-body__actions'
                             >
-                                {fileUpload}
                                 {emojiPicker}
                                 <a
                                     role='button'

@@ -930,11 +930,11 @@ export default class CreateComment extends React.PureComponent {
                                 badConnection={this.props.badConnection}
                                 listenForMentionKeyClick={true}
                             />
+                            {fileUpload}
                             <span
                                 ref='createCommentControls'
                                 className='post-body__actions'
-                            >
-                                {fileUpload}
+                            >     
                                 {emojiPicker}
                             </span>
                         </div>

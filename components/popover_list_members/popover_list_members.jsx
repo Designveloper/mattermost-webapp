@@ -232,17 +232,17 @@ export default class PopoverListMembers extends React.Component {
                         ref='member_popover_target'
                         onClick={this.handleGetProfilesInChannel}
                     >
+                        <MemberIcon
+                            id='channelMemberIcon'
+                            className='icon icon__members'
+                            aria-hidden='true'
+                        />
                         <span
                             id='channelMemberCountText'
                             className='icon__text'
                         >
                             {countText}
                         </span>
-                        <MemberIcon
-                            id='channelMemberIcon'
-                            className='icon icon__members'
-                            aria-hidden='true'
-                        />
                     </div>
                 </OverlayTrigger>
                 <Overlay
