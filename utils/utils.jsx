@@ -1190,7 +1190,9 @@ export function changeColor(colourIn, amt) {
 
 export function getFullName(user) {
     if (user.first_name && user.last_name) {
-        return user.first_name + ' ' + user.last_name;
+        // DSV: Swap first name + last name order
+        // return user.first_name + ' ' + user.last_name;
+        return user.last_name + ' ' + user.first_name;
     } else if (user.first_name) {
         return user.first_name;
     } else if (user.last_name) {

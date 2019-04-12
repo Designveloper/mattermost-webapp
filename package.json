@@ -183,6 +183,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "cypress:run": "cypress run",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "postinstall": "./dsv.sh"
   }
 }

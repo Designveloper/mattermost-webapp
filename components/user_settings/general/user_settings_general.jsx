@@ -867,7 +867,9 @@ class UserSettingsGeneralTab extends React.Component {
             let describe = '';
 
             if (user.first_name && user.last_name) {
-                describe = user.first_name + ' ' + user.last_name;
+                // DSV: Swap first name + last name order
+                // describe = user.first_name + ' ' + user.last_name;
+                describe = user.last_name + ' ' + user.first_name;
             } else if (user.first_name) {
                 describe = user.first_name;
             } else if (user.last_name) {
