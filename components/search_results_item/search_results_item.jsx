@@ -222,14 +222,15 @@ export default class SearchResultsItem extends React.PureComponent {
         let flagContent;
         let rhsControls;
         if (post.state === Constants.POST_DELETED) {
-            message = (
-                <p>
-                    <FormattedMessage
-                        id='post_body.deleted'
-                        defaultMessage='(message deleted)'
-                    />
-                </p>
-            );
+            // DSV: Do not render "message deleted" message
+            // message = (
+            //     <p>
+            //         <FormattedMessage
+            //             id='post_body.deleted'
+            //             defaultMessage='(message deleted)'
+            //         />
+            //     </p>
+            // );
         } else {
             flagContent = (
                 <PostFlagIcon

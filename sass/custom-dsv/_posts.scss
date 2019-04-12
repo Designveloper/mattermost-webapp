@@ -12,6 +12,12 @@
 .post .post__body {
   padding-left: 0;
 }
+.post {
+    &.post--hide-controls {
+        height: 0;
+    }
+}
+
 .post-create__container .custom-textarea.custom-textarea--emoji-picker {
   padding-left: 43px;
 }

@@ -96,14 +96,16 @@ export default class PostMessageView extends React.PureComponent {
     };
 
     renderDeletedPost() {
-        return (
-            <p>
-                <FormattedMessage
-                    id='post_body.deleted'
-                    defaultMessage='(message deleted)'
-                />
-            </p>
-        );
+        // DSV: Do not render "message deleted" message
+        // return (
+        //     <p>
+        //         <FormattedMessage
+        //             id='post_body.deleted'
+        //             defaultMessage='(message deleted)'
+        //         />
+        //     </p>
+        // );
+        return null;
     }
 
     renderEditedIndicator() {
