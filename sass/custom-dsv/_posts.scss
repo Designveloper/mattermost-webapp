@@ -98,3 +98,7 @@
   .form-control {
     font-size: 16px;
   }
+  .sidebar--right .sidebar-right__table > div:not(.sidebar-collapse__container) {
+    display: table-cell;
+    vertical-align: unset;
+}

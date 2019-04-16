@@ -22,6 +22,7 @@ import mattermostThemeImage from 'images/themes/mattermost.png';
 import mattermostDarkThemeImage from 'images/themes/mattermost_dark.png';
 import defaultThemeImage from 'images/themes/organization.png';
 import windows10ThemeImage from 'images/themes/windows_dark.png';
+import dsv from 'images/themes/dsv.png';
 import logoWebhook from 'images/webhook_icon.jpg';
 
 import Permissions from 'mattermost-redux/constants/permissions';
@@ -733,6 +734,34 @@ export const Constants = {
     EMOJI_PICKER_WIDTH_OFFSET: 295,
     THEMES: {
         default: {
+            type: 'Designveloper',
+            sidebarBg: '#323940',
+            sidebarText: '#ffffff',
+            sidebarUnreadText: '#ffffff',
+            sidebarTextHoverBg: '#323940',
+            sidebarTextActiveBorder: '#fcbf10',
+            sidebarTextActiveColor: '#999c9f',
+            sidebarHeaderBg: '#2c3136',
+            sidebarHeaderTextColor: '#ffffff',
+            onlineIndicator: '#fcbf10',
+            awayIndicator: '#e0b333',
+            dndIndicator: '#f74343',
+            mentionBj: '#ffffff',
+            mentionColor: '#31383f',
+            centerChannelBg: '#ffffff',
+            centerChannelColor: '#333333',
+            newMessageSeparator: '#f80',
+            linkColor: '#2389d7',
+            buttonBg: '#26a970',
+            buttonColor: '#ffffff',
+            errorTextColor: '#fd5960',
+            mentionHighlightBg: '#fff2bb',
+            mentionHighlightLink: '#2f81b7',
+            codeTheme: 'github',
+            mentionBg: '#FCBF10',
+            image: dsv,
+        },
+        defaultMattermost: {
             type: 'Mattermost',
             sidebarBg: '#145dbf',
             sidebarText: '#ffffff',
@@ -839,7 +868,7 @@ export const Constants = {
             mentionHighlightLink: '#a4ffeb',
             codeTheme: 'monokai',
             image: windows10ThemeImage,
-        },
+        }
     },
     THEME_ELEMENTS: [
         {
