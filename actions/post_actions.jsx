@@ -15,6 +15,7 @@ import {addRecentEmoji} from 'actions/emoji_actions';
 import * as StorageActions from 'actions/storage';
 import {loadNewDMIfNeeded, loadNewGMIfNeeded} from 'actions/user_actions.jsx';
 import * as RhsActions from 'actions/views/rhs';
+import AppDispatcher from 'dispatcher/app_dispatcher.jsx';
 import {isEmbedVisible} from 'selectors/posts';
 import {getSelectedPostId, getRhsState} from 'selectors/rhs';
 import {
@@ -61,7 +62,24 @@ export function flagPost(postId) {
         const rhsState = getRhsState(state);
 
         if (rhsState === RHSStates.FLAG) {
-            addPostToSearchResults(postId, state, dispatch);
+            const results = state.entities.search.results;
+            const index = results.indexOf(postId);
+            if (index === -1) {
+                const flaggedPost = PostSelectors.getPost(state, postId);
+                const posts = getPostsForIds(state, results).reduce((acc, post) => {
+                    acc[post.id] = post;
+                    return acc;
+                }, {});
+                posts[flaggedPost.id] = flaggedPost;
+
+                const newResults = [...results, postId];
+                newResults.sort((a, b) => comparePosts(posts[a], posts[b]));
+
+                dispatch({
+                    type: SearchTypes.RECEIVED_SEARCH_POSTS,
+                    data: {posts, order: newResults},
+                });
+            }
         }
 
         return {data: true};
@@ -75,7 +93,19 @@ export function unflagPost(postId) {
         const rhsState = getRhsState(state);
 
         if (rhsState === RHSStates.FLAG) {
-            removePostFromSearchResults(postId, state, dispatch);
+            let results = state.entities.search.results;
+            const index = results.indexOf(postId);
+            if (index > -1) {
+                results = [...results];
+                results.splice(index, 1);
+
+                const posts = getPostsForIds(state, results);
+
+                dispatch({
+                    type: SearchTypes.RECEIVED_SEARCH_POSTS,
+                    data: {posts, order: results},
+                });
+            }
         }
 
         return {data: true};
@@ -145,18 +175,11 @@ export function increasePostVisibility(channelId, focusedPostId) {
             return true;
         }
 
-        dispatch(batchActions([
-            {
-                type: ActionTypes.LOADING_POSTS,
-                data: true,
-                channelId,
-            },
-            {
-                type: ActionTypes.INCREASE_POST_VISIBILITY,
-                data: channelId,
-                amount: POST_INCREASE_AMOUNT,
-            },
-        ]));
+        dispatch({
+            type: ActionTypes.LOADING_POSTS,
+            data: true,
+            channelId,
+        });
 
         const page = Math.floor(currentPostVisibility / POST_INCREASE_AMOUNT);
 
@@ -168,13 +191,25 @@ export function increasePostVisibility(channelId, focusedPostId) {
         }
         const posts = result.data;
 
-        dispatch({
+        const actions = [{
             type: ActionTypes.LOADING_POSTS,
             data: false,
             channelId,
-        });
+        }];
 
-        return posts ? posts.order.length >= POST_INCREASE_AMOUNT : false;
+        if (posts) {
+            actions.push({
+                type: ActionTypes.INCREASE_POST_VISIBILITY,
+                data: channelId,
+                amount: posts.order.length,
+            });
+        }
+
+        dispatch(batchActions(actions));
+        return {
+            moreToLoad: posts ? posts.order.length >= POST_INCREASE_AMOUNT : false,
+            error: result.error,
+        };
     };
 }
 
@@ -185,64 +220,25 @@ export function searchForTerm(term) {
     };
 }
 
-function addPostToSearchResults(postId, state, dispatch) {
-    const results = state.entities.search.results;
-    const index = results.indexOf(postId);
-    if (index === -1) {
-        const newPost = PostSelectors.getPost(state, postId);
-        const posts = getPostsForIds(state, results).reduce((acc, post) => {
-            acc[post.id] = post;
-            return acc;
-        }, {});
-        posts[newPost.id] = newPost;
-
-        const newResults = [...results, postId];
-        newResults.sort((a, b) => comparePosts(posts[a], posts[b]));
-
-        dispatch({
-            type: SearchTypes.RECEIVED_SEARCH_POSTS,
-            data: {posts, order: newResults},
-        });
-    }
-}
-
-function removePostFromSearchResults(postId, state, dispatch) {
-    let results = state.entities.search.results;
-    const index = results.indexOf(postId);
-    if (index > -1) {
-        results = [...results];
-        results.splice(index, 1);
-
-        const posts = getPostsForIds(state, results);
-
-        dispatch({
-            type: SearchTypes.RECEIVED_SEARCH_POSTS,
-            data: {posts, order: results},
-        });
-    }
-}
-
 export function pinPost(postId) {
-    return async (dispatch, getState) => {
+    return async (dispatch) => {
         await dispatch(PostActions.pinPost(postId));
-        const state = getState();
-        const rhsState = getRhsState(state);
 
-        if (rhsState === RHSStates.PIN) {
-            addPostToSearchResults(postId, state, dispatch);
-        }
+        AppDispatcher.handleServerAction({
+            type: ActionTypes.RECEIVED_POST_PINNED,
+            postId,
+        });
     };
 }
 
 export function unpinPost(postId) {
-    return async (dispatch, getState) => {
+    return async (dispatch) => {
         await dispatch(PostActions.unpinPost(postId));
-        const state = getState();
-        const rhsState = getRhsState(state);
 
-        if (rhsState === RHSStates.PIN) {
-            removePostFromSearchResults(postId, state, dispatch);
-        }
+        AppDispatcher.handleServerAction({
+            type: ActionTypes.RECEIVED_POST_UNPINNED,
+            postId,
+        });
     };
 }
 
@@ -307,6 +303,12 @@ export function deleteAndRemovePost(post) {
         dispatch({
             type: PostTypes.REMOVE_POST,
             data: post,
+        });
+
+        // Needed for search store
+        AppDispatcher.handleViewAction({
+            type: Constants.ActionTypes.REMOVE_POST,
+            post,
         });
 
         return {data: true};

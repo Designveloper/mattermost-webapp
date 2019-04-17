@@ -5,10 +5,9 @@ import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
 
 import {Posts} from 'mattermost-redux/constants';
-import {SearchTypes} from 'mattermost-redux/action_types';
 
 import * as Actions from 'actions/post_actions';
-import {Constants, ActionTypes, RHSStates} from 'utils/constants';
+import {Constants, ActionTypes} from 'utils/constants';
 
 const mockStore = configureStore([thunk]);
 
@@ -18,10 +17,6 @@ jest.mock('mattermost-redux/actions/posts', () => ({
     createPostImmediately: (...args) => ({type: 'MOCK_CREATE_POST_IMMEDIATELY', args}),
     getPosts: (...args) => ({type: 'MOCK_GET_POSTS', args}),
     getPostsBefore: (...args) => ({type: 'MOCK_GET_POSTS_BEFORE', args}),
-    flagPost: (...args) => ({type: 'MOCK_FLAG_POST', args}),
-    unflagPost: (...args) => ({type: 'MOCK_UNFLAG_POST', args}),
-    pinPost: (...args) => ({type: 'MOCK_PIN_POST', args}),
-    unpinPost: (...args) => ({type: 'MOCK_UNPIN_POST', args}),
 }));
 
 jest.mock('actions/emoji_actions', () => ({
@@ -40,19 +35,20 @@ jest.mock('utils/user_agent', () => ({
     isIosClassic: jest.fn().mockReturnValueOnce(true).mockReturnValue(false),
 }));
 
-const POST_CREATED_TIME = Date.now();
-
-// This mocks the Date.now() function so it returns a constant value
-global.Date.now = jest.fn(() => POST_CREATED_TIME);
+const RECEIVED_POSTS = {
+    channelId: 'current_channel_id',
+    data: {order: [], posts: {new_post_id: {channel_id: 'current_channel_id', id: 'new_post_id', message: 'new message', type: ''}}},
+    type: 'RECEIVED_POSTS',
+};
 const INCREASED_POST_VISIBILITY = {amount: 1, data: 'current_channel_id', type: 'INCREASE_POST_VISIBILITY'};
-const STOP_TYPING = {type: 'stop_typing', data: {id: 'current_channel_idundefined', now: POST_CREATED_TIME, userId: 'some_user_id'}};
 
 function getReceivedPosts(post) {
-    return {
-        type: 'RECEIVED_NEW_POST',
-        data: {...post},
-        channelId: post.channel_id,
-    };
+    const receivedPosts = {...RECEIVED_POSTS};
+    if (post) {
+        receivedPosts.data.posts[post.id] = post;
+    }
+
+    return receivedPosts;
 }
 
 describe('Actions.Posts', () => {
@@ -148,7 +144,6 @@ describe('Actions.Posts', () => {
                 },
             },
             emojis: {customEmoji: {}},
-            search: {results: []},
         },
         views: {
             posts: {
@@ -164,18 +159,11 @@ describe('Actions.Posts', () => {
 
     test('handleNewPost', async () => {
         const testStore = await mockStore(initialState);
-        const newPost = {id: 'new_post_id', channel_id: 'current_channel_id', message: 'new message', type: Constants.PostTypes.ADD_TO_CHANNEL, user_id: 'some_user_id', create_at: POST_CREATED_TIME};
+        const newPost = {id: 'new_post_id', channel_id: 'current_channel_id', message: 'new message', type: Constants.PostTypes.ADD_TO_CHANNEL};
         const msg = {data: {team_id: 'team_id', mentions: ['current_user_id']}};
 
         await testStore.dispatch(Actions.handleNewPost(newPost, msg));
-        expect(testStore.getActions()).toEqual([
-            INCREASED_POST_VISIBILITY,
-            {
-                meta: {batch: true},
-                payload: [getReceivedPosts(newPost), STOP_TYPING],
-                type: 'BATCHING_REDUCER.BATCH',
-            },
-        ]);
+        expect(testStore.getActions()).toEqual([INCREASED_POST_VISIBILITY, getReceivedPosts(newPost)]);
     });
 
     test('setEditingPost', async () => {
@@ -228,43 +216,40 @@ describe('Actions.Posts', () => {
 
         await testStore.dispatch(Actions.increasePostVisibility('current_channel_id'));
         expect(testStore.getActions()).toEqual([
+            {channelId: 'current_channel_id', data: true, type: 'LOADING_POSTS'},
+            {args: ['current_channel_id', 2, 30], type: 'MOCK_GET_POSTS'},
             {
                 meta: {batch: true},
                 payload: [
-                    {channelId: 'current_channel_id', data: true, type: 'LOADING_POSTS'},
-                    {amount: 30, data: 'current_channel_id', type: 'INCREASE_POST_VISIBILITY'},
+                    {channelId: 'current_channel_id', data: false, type: 'LOADING_POSTS'},
                 ],
                 type: 'BATCHING_REDUCER.BATCH',
             },
-            {args: ['current_channel_id', 2, 30], type: 'MOCK_GET_POSTS'},
-            {channelId: 'current_channel_id', data: false, type: 'LOADING_POSTS'},
         ]);
 
         await testStore.dispatch(Actions.increasePostVisibility('current_channel_id', 'latest_post_id'));
         expect(testStore.getActions()).toEqual([
-            {
-                meta: {batch: true},
-                payload: [
-                    {channelId: 'current_channel_id', data: true, type: 'LOADING_POSTS'},
-                    {amount: 30, data: 'current_channel_id', type: 'INCREASE_POST_VISIBILITY'},
-                ],
-                type: 'BATCHING_REDUCER.BATCH',
-            },
+            {channelId: 'current_channel_id', data: true, type: 'LOADING_POSTS'},
             {args: ['current_channel_id', 2, 30], type: 'MOCK_GET_POSTS'},
-            {channelId: 'current_channel_id', data: false, type: 'LOADING_POSTS'},
             {
                 meta: {batch: true},
                 payload: [
-                    {channelId: 'current_channel_id', data: true, type: 'LOADING_POSTS'},
-                    {amount: 30, data: 'current_channel_id', type: 'INCREASE_POST_VISIBILITY'},
+                    {channelId: 'current_channel_id', data: false, type: 'LOADING_POSTS'},
                 ],
                 type: 'BATCHING_REDUCER.BATCH',
             },
+            {channelId: 'current_channel_id', data: true, type: 'LOADING_POSTS'},
             {
                 args: ['current_channel_id', 'latest_post_id', 2, 30],
                 type: 'MOCK_GET_POSTS_BEFORE',
             },
-            {channelId: 'current_channel_id', data: false, type: 'LOADING_POSTS'},
+            {
+                meta: {batch: true},
+                payload: [
+                    {channelId: 'current_channel_id', data: false, type: 'LOADING_POSTS'},
+                ],
+                type: 'BATCHING_REDUCER.BATCH',
+            },
         ]);
     });
 
@@ -319,54 +304,6 @@ describe('Actions.Posts', () => {
         expect(testStore.getActions()).toEqual([
             {args: ['post_id_1', 'emoji_name_1'], type: 'MOCK_ADD_REACTION'},
             {args: ['emoji_name_1'], type: 'MOCK_ADD_RECENT_EMOJI'},
-        ]);
-    });
-
-    test('flagPost', async () => {
-        const testStore = await mockStore({...initialState, views: {rhs: {rhsState: RHSStates.FLAG}}});
-
-        const post = testStore.getState().entities.posts.posts[latestPost.id];
-
-        await testStore.dispatch(Actions.flagPost(post.id));
-        expect(testStore.getActions()).toEqual([
-            {args: [post.id], type: 'MOCK_FLAG_POST'},
-            {data: {posts: {[post.id]: post}, order: [post.id]}, type: SearchTypes.RECEIVED_SEARCH_POSTS},
-        ]);
-    });
-
-    test('unflagPost', async () => {
-        const testStore = await mockStore({views: {rhs: {rhsState: RHSStates.FLAG}}, entities: {...initialState.entities, search: {results: [latestPost.id]}}});
-
-        const post = testStore.getState().entities.posts.posts[latestPost.id];
-
-        await testStore.dispatch(Actions.unflagPost(post.id));
-        expect(testStore.getActions()).toEqual([
-            {args: [post.id], type: 'MOCK_UNFLAG_POST'},
-            {data: {posts: [], order: []}, type: SearchTypes.RECEIVED_SEARCH_POSTS},
-        ]);
-    });
-
-    test('pinPost', async () => {
-        const testStore = await mockStore({...initialState, views: {rhs: {rhsState: RHSStates.PIN}}});
-
-        const post = testStore.getState().entities.posts.posts[latestPost.id];
-
-        await testStore.dispatch(Actions.pinPost(post.id));
-        expect(testStore.getActions()).toEqual([
-            {args: [post.id], type: 'MOCK_PIN_POST'},
-            {data: {posts: {[post.id]: post}, order: [post.id]}, type: SearchTypes.RECEIVED_SEARCH_POSTS},
-        ]);
-    });
-
-    test('unpinPost', async () => {
-        const testStore = await mockStore({views: {rhs: {rhsState: RHSStates.PIN}}, entities: {...initialState.entities, search: {results: [latestPost.id]}}});
-
-        const post = testStore.getState().entities.posts.posts[latestPost.id];
-
-        await testStore.dispatch(Actions.unpinPost(post.id));
-        expect(testStore.getActions()).toEqual([
-            {args: [post.id], type: 'MOCK_UNPIN_POST'},
-            {data: {posts: [], order: []}, type: SearchTypes.RECEIVED_SEARCH_POSTS},
         ]);
     });
 });
