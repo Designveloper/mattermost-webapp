@@ -39,32 +39,22 @@ export default class PostAttachmentOpenGraph extends React.PureComponent {
          */
         openGraphData: PropTypes.object,
 
-        /**
-         * Whether or not the server has an image proxy enabled
-         */
-        hasImageProxy: PropTypes.bool.isRequired,
-
         isEmbedVisible: PropTypes.bool,
         toggleEmbedVisibility: PropTypes.func.isRequired,
 
         actions: PropTypes.shape({
             editPost: PropTypes.func.isRequired,
-
-            /**
-             * The function to get open graph data for a link
-             */
-            getOpenGraphMetadata: PropTypes.func.isRequired,
         }).isRequired,
     }
 
     constructor(props) {
         super(props);
+        this.handleRemovePreview = this.handleRemovePreview.bind(this);
 
         const removePreview = this.isRemovePreview(props.post, props.currentUser);
-        const imageUrl = PostAttachmentOpenGraph.getBestImageUrl(props.openGraphData, props.hasImageProxy);
+        const imageUrl = this.getBestImageUrl(props.openGraphData);
         const {metadata} = props.post;
         const hasLargeImage = metadata && metadata.images && metadata.images[imageUrl] && imageUrl ? this.hasLargeImage(metadata.images[imageUrl]) : false;
-
         this.state = {
             hasLargeImage,
             removePreview,
@@ -82,24 +72,15 @@ export default class PostAttachmentOpenGraph extends React.PureComponent {
     UNSAFE_componentWillReceiveProps(nextProps) { // eslint-disable-line camelcase
         if (!Utils.areObjectsEqual(nextProps.post, this.props.post)) {
             const removePreview = this.isRemovePreview(nextProps.post, nextProps.currentUser);
-            this.setState({
-                removePreview,
-            });
-        }
-
-        if (!Utils.areObjectsEqual(nextProps.openGraphData, this.props.openGraphData)) {
-            const imageUrl = PostAttachmentOpenGraph.getBestImageUrl(nextProps.openGraphData, nextProps.hasImageProxy);
+            const imageUrl = this.getBestImageUrl(nextProps.openGraphData);
             const {metadata} = nextProps.post;
             const hasLargeImage = metadata && metadata.images && metadata.images[imageUrl] && imageUrl ? this.hasLargeImage(metadata.images[imageUrl]) : false;
 
             this.setState({
                 hasLargeImage,
+                removePreview,
                 imageUrl,
             });
-        }
-
-        if (nextProps.link !== this.props.link && !nextProps.post.metadata) {
-            this.fetchData(nextProps.link);
         }
     }
 
@@ -111,6 +92,15 @@ export default class PostAttachmentOpenGraph extends React.PureComponent {
         if (!this.props.openGraphData) {
             this.props.actions.getOpenGraphMetadata(url);
         }
+    }
+
+    getBestImageUrl(data) {
+        if (!data || Utils.isEmptyObject(data.images)) {
+            return null;
+        }
+
+        const bestImage = CommonUtils.getNearestPoint(DIMENSIONS_NEAREST_POINT_IMAGE, data.images, 'width', 'height');
+        return bestImage.secure_url || bestImage.url;
     }
 
     hasLargeImage({height, width}) {
@@ -215,9 +205,7 @@ export default class PostAttachmentOpenGraph extends React.PureComponent {
 
         const {data} = await this.props.actions.editPost(patchedPost);
         if (data) {
-            if (this.mounted) {
-                this.setState({removePreview: true});
-            }
+            this.setState({removePreview: true});
         }
     }
 
@@ -311,15 +299,5 @@ export default class PostAttachmentOpenGraph extends React.PureComponent {
                 </div>
             </div>
         );
-    }
-
-    static getBestImageUrl(data, hasImageProxy) {
-        if (!data || !data.images || data.images.length === 0) {
-            return null;
-        }
-
-        const bestImage = CommonUtils.getNearestPoint(DIMENSIONS_NEAREST_POINT_IMAGE, data.images, 'width', 'height');
-
-        return getImageSrc(bestImage.secure_url || bestImage.url, hasImageProxy);
     }
 }

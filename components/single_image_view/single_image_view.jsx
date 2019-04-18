@@ -6,11 +6,19 @@ import React from 'react';
 
 import {getFilePreviewUrl, getFileUrl} from 'mattermost-redux/utils/file_utils';
 
+<<<<<<< HEAD
 import SizeAwareImage from 'components/size_aware_image';
+=======
+>>>>>>> add new fix for load new message
 import {FileTypes} from 'utils/constants.jsx';
 import {
     getFileType,
 } from 'utils/utils';
+<<<<<<< HEAD
+=======
+
+import LoadingImagePreview from 'components/loading_image_preview';
+>>>>>>> add new fix for load new message
 import ViewImageModal from 'components/view_image';
 
 const PREVIEW_IMAGE_MIN_DIMENSION = 50;
@@ -43,7 +51,13 @@ export default class SingleImageView extends React.PureComponent {
     }
 
     componentDidMount() {
+<<<<<<< HEAD
         this.mounted = true;
+=======
+        window.addEventListener('resize', this.handleResize);
+        this.setViewPortWidth();
+        this.loadImage(this.props.fileInfo);
+>>>>>>> add new fix for load new message
     }
 
     static getDerivedStateFromProps(props, state) {
@@ -59,7 +73,11 @@ export default class SingleImageView extends React.PureComponent {
     }
 
     componentWillUnmount() {
+<<<<<<< HEAD
         this.mounted = false;
+=======
+        window.removeEventListener('resize', this.handleResize);
+>>>>>>> add new fix for load new message
     }
 
     imageLoaded = () => {
@@ -68,6 +86,26 @@ export default class SingleImageView extends React.PureComponent {
         }
     }
 
+<<<<<<< HEAD
+=======
+    loadImage = (fileInfo) => {
+        const {has_preview_image: hasPreviewImage, id} = fileInfo;
+        const fileURL = getFileUrl(id);
+        const previewURL = hasPreviewImage ? getFilePreviewUrl(id) : fileURL;
+
+        const loaderImage = new Image();
+
+        loaderImage.src = previewURL;
+        loaderImage.onload = () => {
+            if (this.imageLoaded) {
+                this.imageLoaded.src = previewURL;
+            }
+
+            this.setState({loaded: true});
+        };
+    }
+
+>>>>>>> add new fix for load new message
     handleImageClick = (e) => {
         e.preventDefault();
         this.setState({showPreviewModal: true});
@@ -77,6 +115,35 @@ export default class SingleImageView extends React.PureComponent {
         this.setState({showPreviewModal: false});
     }
 
+<<<<<<< HEAD
+=======
+    setImageLoadedRef = (node) => {
+        this.imageLoaded = node;
+    }
+
+    computeImageDimensions = () => {
+        const {fileInfo} = this.props;
+        const viewPortWidth = this.state.viewPortWidth;
+
+        let previewWidth = fileInfo.width;
+        let previewHeight = fileInfo.height;
+
+        if (viewPortWidth && previewWidth > viewPortWidth) {
+            const origRatio = fileInfo.height / fileInfo.width;
+            previewWidth = Math.min(PREVIEW_IMAGE_MAX_WIDTH, fileInfo.width, viewPortWidth);
+            previewHeight = previewWidth * origRatio;
+        }
+
+        if (previewHeight > PREVIEW_IMAGE_MAX_HEIGHT) {
+            const heightRatio = PREVIEW_IMAGE_MAX_HEIGHT / previewHeight;
+            previewHeight = PREVIEW_IMAGE_MAX_HEIGHT;
+            previewWidth *= heightRatio;
+        }
+
+        return {previewWidth, previewHeight};
+    }
+
+>>>>>>> add new fix for load new message
     toggleEmbedVisibility = () => {
         this.props.actions.toggleEmbedVisibility(this.props.postId);
     }
@@ -87,6 +154,7 @@ export default class SingleImageView extends React.PureComponent {
             loaded,
         } = this.state;
 
+<<<<<<< HEAD
         const {has_preview_image: hasPreviewImage, id} = fileInfo;
         const fileURL = getFileUrl(id);
         const previewURL = hasPreviewImage ? getFilePreviewUrl(id) : fileURL;
@@ -94,6 +162,9 @@ export default class SingleImageView extends React.PureComponent {
         const previewHeight = fileInfo.height;
         const previewWidth = fileInfo.width;
 
+=======
+        const {previewHeight, previewWidth} = this.computeImageDimensions();
+>>>>>>> add new fix for load new message
         let minPreviewClass = '';
         if (
             previewWidth < PREVIEW_IMAGE_MIN_DIMENSION ||

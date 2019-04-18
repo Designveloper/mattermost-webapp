@@ -145,7 +145,7 @@ export default class PostBodyAdditionalContent extends React.PureComponent {
                 postId={this.props.post.id}
                 key={this.props.post.id}
                 options={this.props.options}
-                imagesMetadata={this.props.post.metadata && this.props.post.metadata.images}
+                imagesMetadata={this.props.post.metadata.images}
             />
         );
     }
@@ -199,11 +199,9 @@ export default class PostBodyAdditionalContent extends React.PureComponent {
     }
 
     handleLinkLoaded() {
-        if (this.mounted) {
-            this.setState({
-                linkLoaded: true,
-            });
-        }
+        this.setState({
+            linkLoaded: true,
+        });
     }
 
     handleImageClick = () => {
@@ -230,14 +228,14 @@ export default class PostBodyAdditionalContent extends React.PureComponent {
         }
 
         if (this.isLinkImage(link)) {
-            const dimensions = this.props.post.metadata && this.props.post.metadata.images && this.props.post.metadata.images[link];
+            const {metadata} = this.props.post;
             return (
                 <PostImage
                     channelId={this.props.post.channel_id}
                     link={link}
                     onLinkLoaded={this.handleLinkLoaded}
                     handleImageClick={this.handleImageClick}
-                    dimensions={dimensions}
+                    dimensions={metadata && metadata.images && metadata.images[link]}
                 />
             );
         }
@@ -266,7 +264,7 @@ export default class PostBodyAdditionalContent extends React.PureComponent {
     }
 
     renderImagePreview() {
-        let link = this.state.link;
+        const link = this.state.link;
         if (!link || !this.isLinkImage(link)) {
             return null;
         }
@@ -277,8 +275,6 @@ export default class PostBodyAdditionalContent extends React.PureComponent {
         }
 
         const ext = captureExt.exec(link)[1];
-
-        link = PostUtils.getImageSrc(link, this.props.hasImageProxy);
 
         return (
             <ViewImageModal
