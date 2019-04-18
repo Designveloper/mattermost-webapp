@@ -102,3 +102,6 @@
     display: table-cell;
     vertical-align: unset;
 }
+.post.post--comment .post__body {
+  padding-left: 7px !important;
+}
