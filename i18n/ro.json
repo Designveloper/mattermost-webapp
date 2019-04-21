@@ -12,19 +12,13 @@
   "about.hashwebapp": "Webapp Construcția Hash:",
   "about.licensed": "Licențiat la:",
   "about.notice": "Mattermost este făcut posibil de către software-ul open source utilizat în [server](!https://about.mattermost.com/platform-notice-txt/), [desktop](!https://about.mattermost.com/desktop-notice-txt/) și [mobil](!https://about.mattermost.com/mobile-notice-txt/) aplicații.",
-<<<<<<< HEAD
   "about.privacy": "Politica de confidentialitate",
-=======
->>>>>>> translations PR 20190225 (#2408)
   "about.teamEditionLearn": "Alăturați-vă comunității Mattermost la ",
   "about.teamEditionSt": "Toate comunicările echipei într-un singur loc, cautari instante și accesibile oriunde.",
   "about.teamEditiont0": "Ediție de echipă",
   "about.teamEditiont1": "Ediția Comerciala",
   "about.title": "Despre Mattermost",
-<<<<<<< HEAD
   "about.tos": "Termenii serviciului",
-=======
->>>>>>> translations PR 20190225 (#2408)
   "about.version": "Versiunea Mattermost:",
   "access_history.title": "Accesează istoria",
   "activity_log_modal.android": "Android",
@@ -32,11 +26,7 @@
   "activity_log_modal.androidNativeClassicApp": "Aplicatie Clasică Nativă Android",
   "activity_log_modal.desktop": "Aplicație Desktop Nativă",
   "activity_log_modal.iphoneNativeApp": "Aplicație Nativă iPhone",
-<<<<<<< HEAD
   "activity_log_modal.iphoneNativeClassicApp": "Aplicație Clasică Nativă iPhone",
-=======
-  "activity_log_modal.iphoneNativeClassicApp": "Aplicație Clasică Nativă iPhone ",
->>>>>>> translations PR 20190225 (#2408)
   "activity_log.activeSessions": "Sesiuni active",
   "activity_log.browser": "Navigator: {browser}",
   "activity_log.firstTime": "Prima dată activ: {data}, {timp}",
@@ -840,13 +830,8 @@
   "admin.nav.menuAriaLabel": "Meniul Consola de administrare",
   "admin.nav.switch": "Selecția echipei",
   "admin.nav.troubleshootingForum": "Depanarea Forumului",
-<<<<<<< HEAD
   "admin.notifications.email": "E-mail",
   "admin.notifications.push": "Notificate Mobilă",
-=======
-  "admin.notifications.email": "Email",
-  "admin.notifications.push": "Mobile Push",
->>>>>>> translations PR 20190225 (#2408)
   "admin.oauth.gitlab": "GitLab",
   "admin.oauth.google": "Aplicatii Google",
   "admin.oauth.off": "Nu permiteți conectarea prin intermediul unui furnizor OAuth 2.0",
@@ -1425,11 +1410,7 @@
   "admin.team.openServerTitle": "Activați serverul deschis: ",
   "admin.team.restrict_direct_message_any": "Orice utilizator de pe serverul Mattermost",
   "admin.team.restrict_direct_message_team": "Orice membru al echipei",
-<<<<<<< HEAD
   "admin.team.restrictDescription": "Echipele și conturile de utilizator pot fi create numai dintr-un anumit domeniu (de exemplu \"materialmost.org\") sau din lista de domenii separate prin virgulă (de exemplu \"corp.mattermost.com, materialmost.org\").",
-=======
-  "admin.team.restrictDescription": "Echipele și conturile de utilizator pot fi create numai dintr-un anumit domeniu (de ex., \"mattermost.org\") sau din lista de domenii separate prin virgulă (de exemplu, \"corp.mattermost.com, mattermost.org\").",
->>>>>>> translations PR 20190225 (#2408)
   "admin.team.restrictDirectMessage": "Permiteți utilizatorilor să deschidă canale Direct Message cu:",
   "admin.team.restrictDirectMessageDesc": "'Pentru orice utilizator de pe Mattermost server' permite utilizatorilor pentru a deschide un Mesaj Direct de canal cu orice utilizator de pe server, chiar dacă ele nu sunt pe echipe împreună. 'Orice membru al echipei' limitează capacitatea în Mesaje Directe 'Mai mult' meniu pentru a deschide doar Mesaj Direct canale cu utilizatorii care sunt în aceeași echipă.\n \nNotă: Această setare afectează numai UI, nu permisiuni pe server.",
   "admin.team.restrictExample": "De exemplu: \"corp.mattermost.com, materialmost.org\"",
@@ -1523,15 +1504,15 @@
   "analytics.team.title": "Statistica echipei pentru {team}",
   "analytics.team.totalPosts": "Total posturi",
   "analytics.team.totalUsers": "Total utilizatori activi",
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
   "announcement_bar.error.email_verification_required": "Verificați mesajele primite pentru a verifica adresa.",
-=======
+
   "announcement_bar.error.email_verification_required": "Verificați adresa de e-mail la adresa {email} pentru a verifica adresa.",
->>>>>>> translations PR 20190225 (#2408)
-=======
+
+
   "announcement_bar.error.email_verification_required": "Verificați mesajele primite pentru a verifica adresa.",
->>>>>>> translations PR 20190314 (#2503)
+
   "announcement_bar.error.license_expired": "Licența Enterprise a expirat și unele funcții pot fi dezactivate. [Vă rugăm să reînnoiți](!{link}).",
   "announcement_bar.error.license_expiring": "Licența pentru întreprinderi expiră la {date, date, long}. [Reînnoiți] (!{link}).",
   "announcement_bar.error.past_grace": "Licența Enterprise a expirat și unele funcții pot fi dezactivate. Contactați administratorul de sistem pentru detalii.",
@@ -1756,11 +1737,11 @@
   "channel_notifications.muteChannel.help": "Blocarea dezactivează notificările desktop, e-mail și împingere pentru acest canal. Canalul nu va fi marcat ca necitit dacă nu sunteți menționat.",
   "channel_notifications.muteChannel.off.title": "Închis",
   "channel_notifications.muteChannel.on.title": "Deschis",
-<<<<<<< HEAD
+
   "channel_notifications.muteChannel.on.title.collapse": "Liniștea este activată. Comenzile desktop, e-mail și push nu vor fi trimise pentru acest canal.",
-=======
+
   "channel_notifications.muteChannel.on.title.collapse": "Mute is enabled. Desktop, email and push notifications will not be sent for this channel.",
->>>>>>> translations PR 20190314 (#2503)
+
   "channel_notifications.muteChannel.settings": "Dezactivați canalul",
   "channel_notifications.never": "Niciodată",
   "channel_notifications.onlyMentions": "Numai pentru mențiuni",
@@ -2112,7 +2093,7 @@
   "get_team_invite_link_modal.help": "Trimite coechipierii link-ul de mai jos pentru a vă înscrie la acest site al echipei. Adresa de invitație în echipă  poate fi partajată cu mai mulți colegi, deoarece nu se schimbă dacă nu este regenerată în Setările echipei de către un administrator de echipă.",
   "get_team_invite_link_modal.helpDisabled": "Crearea de utilizatori a fost dezactivată pentru echipa dvs. Adresați-vă administratorului echipei pentru detalii.",
   "get_team_invite_link_modal.title": "Adresa invitației în echipă",
-<<<<<<< HEAD
+
   "help.attaching.downloading.description": "Descărcați un fișier atașat făcând clic pe pictograma de descărcare din dreptul miniaturii fișierului sau deschizând fișierul de examinare a fișierului și făcând clic pe **Descărcare**.",
   "help.attaching.downloading.title": "Descărcarea fișierelor",
   "help.attaching.dragdrop.description": "Încărcați un fișier sau o selecție de fișiere prin glisarea fișierelor de pe computer în bara laterală din dreapta sau în panoul central. Tragerea și plasarea atașează fișierele în caseta de introducere a mesajelor, apoi puteți introduce opțional un mesaj și apăsați **ENTER** pentru a posta.",
@@ -2174,7 +2155,7 @@
   "help.formatting.githubTheme": "**Tema GitHub**",
   "help.formatting.headings.description": "Faceți o rubrică tastând # și un spațiu înainte de titlu. Pentru rubricile mai mici, folosiți mai multe #.",
   "help.formatting.headings.title": "Rubrici",
-=======
+
   "gif_picker.gfycat": "Căutare Gfycat",
   "help.attaching.downloading": "#### Descărcarea fișierelor\nDescărcați un fișier atașat făcând clic pe pictograma de descărcare din dreptul miniaturii fișierului sau deschizând fișierul de examinare a fișierului și făcând clic pe **Descărcare**.",
   "help.attaching.dragdrop": "#### Trageți și aruncați\nÎncărcați un fișier sau o selecție de fișiere prin glisarea fișierelor de pe computer în bara laterală din dreapta sau în panoul central. Tragerea și plasarea atașează fișierele în caseta de introducere a mesajelor, apoi puteți introduce opțional un mesaj și apăsați **ENTER** pentru a posta.",
@@ -2212,19 +2193,19 @@
   "help.formatting.example": "Example:",
   "help.formatting.githubTheme": "** Tema GitHub **",
   "help.formatting.headings": "## Paragrafe\n\nFaceți o rubrică tastând # și un spațiu înainte de titlu. Pentru rubricile mai mici, folosiți mai multe #.",
->>>>>>> translations PR 20190225 (#2408)
+
   "help.formatting.headings2": "Alternativ, puteți sublinia textul folosind `===` sau `---` pentru a crea titluri.",
   "help.formatting.headings2Example": "Marcaj mare\n------------",
   "help.formatting.headingsExample": "## Rubrică mare\n### Poziție mai mică\n#### Chiar mai mică titlu",
   "help.formatting.images.description": "Creați imagini în linie folosind un `!` Urmat de textul alt în paranteze pătrate și link-ul în paranteze normale. Adăugați hover text prin plasarea lui în citate după link.",
   "help.formatting.images.title": "Imagini în interior",
   "help.formatting.imagesExample": "![alt text](link \"hover text\")\n\nși\n\n[![Build Status](https://travis-ci.org/mattermost/mattermost-server.svg?branch=master)](https://travis-ci.org/mattermost/mattermost-server) [! [Github](https://assets-cdn.github.com/favicon.ico)](https://github.com/mattermost/mattermost-server)",
-<<<<<<< HEAD
+
   "help.formatting.inline.description": "Creați un font monospațiat în linie prin înconjurarea acestuia cu spătule.",
   "help.formatting.inline.title": "Cod in interior",
-=======
+
   "help.formatting.inline": "## Cod In-line\n\nCreați un font monospațiat în linie prin înconjurarea acestuia cu spătule.",
->>>>>>> translations PR 20190225 (#2408)
+
   "help.formatting.intro": "Markdown facilitează formatarea mesajelor. Tastați un mesaj așa cum ați proceda în mod normal și utilizați aceste reguli pentru al face cu formatare specială.",
   "help.formatting.lines.description": "Creează o linie utilizând trei `*`, `_` sau `-`.",
   "help.formatting.lines.title": "Linii",
@@ -2265,7 +2246,7 @@
   "help.link.formatting": "Formatarea mesajelor folosind Markdown",
   "help.link.mentioning": "Menționând colegii de echipă",
   "help.link.messaging": "Mesaje de bază",
-<<<<<<< HEAD
+
   "help.mentioning.channel.description": "Puteți menționa un întreg canal introducând `@channel`. Toți membrii canalului vor primi o notificare de mențiune care se va comporta la fel ca și când membrii ar fi fost menționați personal.",
   "help.mentioning.channel.title": "@Canal",
   "help.mentioning.channelExample": "@canal ați avut interviuri grozave în această săptămână. Cred că am găsit niște potențiali candidați excelenți!",
@@ -2279,19 +2260,19 @@
   "help.mentioning.username.description1": "Puteți menționa un coechipier folosind simbolul `@` plus numele de utilizator pentru a le trimite o notificare de mențiune.",
   "help.mentioning.username.description2": "Introduceți `@` pentru a afișa o listă cu membrii echipei care pot fi menționați. Pentru a filtra lista, introduceți primele câteva litere ale oricărui nume de utilizator, prenume, prenume sau pseudonim. Tastele **Sus** și **Jos** pot fi apoi utilizate pentru a parcurge înregistrările din listă și apăsând **ENTER** veți selecta ce utilizator să menționeze. Odată selectată, numele de utilizator va înlocui automat numele sau pseudonimul complet. Următorul exemplu trimite o notificare specială către **alice** care o avertizează despre canal și despre mesajul în care a fost menționată. Dacă **alice** este departe de Mattermost și are [notificări prin e-mail](!https://docs.mattermost.com/help/getting-started/configuring-notifications.html#email-notifications) activate, atunci ea va primi o alertă prin e-mail a mențiunii sale.",
   "help.mentioning.username.title": "@Utilizator",
-=======
+
   "help.mentioning.channel": "#### @Canal\nPuteți menționa un întreg canal introducând `@channel`. Toți membrii canalului vor primi o notificare de mențiune care se va comporta la fel ca și când membrii ar fi fost menționați personal.",
   "help.mentioning.channelExample": "@canal ați avut interviuri grozave în această săptămână. Cred că am găsit niște potențiali candidați excelenți!",
   "help.mentioning.mentions": "## @Mențiuni\nUtilizați @mențiuni pentru a atrage atenția anumitor membri ai echipei.",
   "help.mentioning.recent": "## Mentiuni recente\nFaceți clic pe `@` de lângă caseta de căutare pentru a căuta cele mai recente @mențiuni și cuvinte care declanșează mențiunile. Dați clic pe **Salt** de lângă un rezultat al căutării în bara laterală din partea dreaptă pentru a sari panoul central pe canalul și locația mesajului cu mențiunea.",
   "help.mentioning.title": "# Menționând colegii de echipă\n_____",
   "help.mentioning.triggers": "## Cuvintele care declanșează\nMențiuni În afară de a fi notificate prin @username și @channel, puteți personaliza cuvintele care declanșează notificările în **Setări cont** > **Notificări** ** **Cuvintele care declanșează mențiunile**. În mod implicit, veți primi notificări de mențiuni pe numele dvs. și puteți adăuga mai multe cuvinte introducându-le în caseta de introducere separată prin virgule. Acest lucru este util dacă doriți să fiți anunțat (ă) de toate postările referitoare la anumite subiecte, de exemplu, \"intervievarea\" sau \"marketingul\".",
-<<<<<<< HEAD
+
   "help.mentioning.username": "eeeee#### @Username\nPuteți menționa un coechipier utilizând simbolul `@` plus numele de utilizator pentru a le trimite o notificare de mențiune.\n\nIntroduceți `@` pentru a afișa o listă cu membrii echipei care pot fi menționați. Pentru a filtra lista, introduceți primele câteva litere ale oricărui nume de utilizator, prenume, prenume sau pseudonim. Tastele **Sus** și **Jos** pot fi apoi utilizate pentru a parcurge înregistrările din listă și apăsând **ENTER** veți selecta ce utilizator să menționeze. Odată selectată, numele de utilizator va înlocui automat numele sau pseudonimul complet.\nUrmătorul exemplu trimite o notificare specială către **alice** care o avertizează despre canal și despre mesajul în care a fost menționată. Dacă **alice** este departe de Mattermost și are [notificări prin e-mail](https://docs.mattermost.com/help/getting-started/configuring-notifications.html#email-notifications) activate, atunci ea va primi o alertă prin e-mail a mențiunii sale.",
->>>>>>> translations PR 20190225 (#2408)
-=======
+
+
   "help.mentioning.username": "#### @Username\nPuteți menționa un coechipier utilizând simbolul `@` plus numele de utilizator pentru a le trimite o notificare de mențiune.\n\nIntroduceți `@` pentru a afișa o listă cu membrii echipei care pot fi menționați. Pentru a filtra lista, introduceți primele câteva litere ale oricărui nume de utilizator, prenume, prenume sau pseudonim. Tastele **Sus** și **Jos** pot fi apoi utilizate pentru a parcurge înregistrările din listă și apăsând **ENTER** veți selecta ce utilizator să menționeze. Odată selectată, numele de utilizator va înlocui automat numele sau pseudonimul complet.\nUrmătorul exemplu trimite o notificare specială către **alice** care o avertizează despre canal și despre mesajul în care a fost menționată. Dacă **alice** este departe de Mattermost și are [notificări prin e-mail](https://docs.mattermost.com/help/getting-started/configuring-notifications.html#email-notifications) activate, atunci ea va primi o alertă prin e-mail a mențiunii sale.",
->>>>>>> translations PR 20190314 (#2503)
+
   "help.mentioning.usernameCont": "Dacă utilizatorul pe care l-ați menționat nu aparține canalului, va fi postat un mesaj de sistem pentru a vă anunța. Acesta este un mesaj temporar văzut doar de persoana care a declanșat-o. Pentru a adăuga utilizatorul menționat pe canal, accesați meniul derulant din dreptul numelui canalului și selectați ** Adăugați membri **.",
   "help.mentioning.usernameExample": "@alice cum a făcut interviul dumneavoastră să meargă cu noul candidat?",
   "help.messaging.attach": "**Atașați fișierele** prin glisarea și plasarea în Mattermost sau făcând clic pe pictograma atașament din caseta de introducere a textului.",
