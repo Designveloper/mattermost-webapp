@@ -620,7 +620,7 @@ export default class FileUpload extends PureComponent {
             });
             bodyAction = (
                 <React.Fragment>
-                    <MenuWrapper>
+                    <MenuWrapper className='upload-btn'>
                         <button
                             type='button'
                             className='style--none'
