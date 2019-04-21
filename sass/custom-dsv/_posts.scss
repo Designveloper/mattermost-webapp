@@ -105,3 +105,14 @@
 .post.post--comment .post__body {
   padding-left: 7px !important;
 }
+.MenuWrapper {
+  position: static !important;
+}
+.MenuWrapperAnimation-enter-done {
+  left: 0 !important;
+}
+.post-body__actions:focus,
+.post-body__actions span:focus,
+.post-body__actions svg:focus{
+  outline: 0;
+}
