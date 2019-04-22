@@ -6,25 +6,28 @@ import React from 'react';
 import {getFileThumbnailUrl, getFileUrl} from 'mattermost-redux/utils/file_utils';
 
 import FilenameOverlay from 'components/file_attachment/filename_overlay.jsx';
-import RemoveIcon from 'components/icon/remove_icon';
 import Constants, {FileTypes} from 'utils/constants.jsx';
 import * as Utils from 'utils/utils.jsx';
 
-import FileProgressPreview from './file_progress_preview.jsx';
+import loadingGif from 'images/load.gif';
 
 export default class FilePreview extends React.PureComponent {
     static propTypes = {
         onRemove: PropTypes.func.isRequired,
         fileInfos: PropTypes.arrayOf(PropTypes.object).isRequired,
         uploadsInProgress: PropTypes.array,
-        uploadsProgressPercent: PropTypes.object,
     };
 
     static defaultProps = {
         fileInfos: [],
         uploadsInProgress: [],
-        uploadsProgressPercent: {},
     };
+
+    componentDidUpdate() {
+        if (this.props.uploadsInProgress.length > 0) {
+            this.refs[this.props.uploadsInProgress[0]].scrollIntoView();
+        }
+    }
 
     handleRemove = (id) => {
         this.props.onRemove(id);
@@ -32,7 +35,6 @@ export default class FilePreview extends React.PureComponent {
 
     render() {
         const previews = [];
-
         this.props.fileInfos.forEach((info, idx) => {
             const type = Utils.getFileType(info.extension);
 
@@ -100,7 +102,10 @@ export default class FilePreview extends React.PureComponent {
                                 className='file-preview__remove'
                                 onClick={this.handleRemove.bind(this, info.id)}
                             >
-                                <RemoveIcon/>
+                                <i
+                                    className='fa fa-remove'
+                                    title={Utils.localizeMessage('generic_icons.remove', 'Remove Icon')}
+                                />
                             </a>
                         </div>
                     </div>
@@ -110,12 +115,26 @@ export default class FilePreview extends React.PureComponent {
 
         this.props.uploadsInProgress.forEach((clientId) => {
             previews.push(
-                <FileProgressPreview
+                <div
+                    ref={clientId}
                     key={clientId}
-                    clientId={clientId}
-                    fileInfo={this.props.uploadsProgressPercent[clientId]}
-                    handleRemove={this.handleRemove}
-                />
+                    className='file-preview'
+                    data-client-id={clientId}
+                >
+                    <img
+                        className='spinner'
+                        src={loadingGif}
+                    />
+                    <a
+                        className='file-preview__remove'
+                        onClick={this.handleRemove.bind(this, clientId)}
+                    >
+                        <i
+                            className='fa fa-remove'
+                            title={Utils.localizeMessage('generic_icons.remove', 'Remove Icon')}
+                        />
+                    </a>
+                </div>
             );
         });
 

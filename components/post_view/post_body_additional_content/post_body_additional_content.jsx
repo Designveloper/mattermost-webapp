@@ -69,28 +69,21 @@ export default class PostBodyAdditionalContent extends React.PureComponent {
         this.generateToggleableEmbed = this.generateToggleableEmbed.bind(this);
         this.generateStaticEmbed = this.generateStaticEmbed.bind(this);
         this.isLinkToggleable = this.isLinkToggleable.bind(this);
+        this.handleLinkLoadError = this.handleLinkLoadError.bind(this);
         this.handleLinkLoaded = this.handleLinkLoaded.bind(this);
-        const {metadata} = props.post;
-        const embedMetadata = metadata && metadata.embeds && metadata.embeds[0];
-        const link = embedMetadata && embedMetadata.url ? embedMetadata.url : Utils.extractFirstLink(props.post.message);
-        const isMetadataImage = embedMetadata && embedMetadata.url ? embedMetadata.type === 'image' : false;
+
         this.state = {
-            link,
+            link: Utils.extractFirstLink(props.post.message),
             linkLoadError: false,
             linkLoaded: false,
-            isMetadataImage,
         };
     }
 
     componentDidMount() {
         // check the availability of the image rendered(if any) in the first render.
-        this.mounted = true;
-        const {metadata} = this.props.post;
-
-        if (!metadata) {
-            this.loadShortenedImageLink();
-        }
+        this.loadShortenedImageLink();
         this.preCheckImageLink();
+        this.mounted = true;
     }
 
     componentWillUnmount() {
@@ -98,7 +91,7 @@ export default class PostBodyAdditionalContent extends React.PureComponent {
     }
 
     async loadShortenedImageLink() {
-        if (this.state.link && !this.isLinkImage(this.state.link) && !YoutubeVideo.isYoutubeLink(this.state.link) && this.props.enableLinkPreviews) {
+        if (!this.isLinkImage(this.state.link) && !YoutubeVideo.isYoutubeLink(this.state.link) && this.props.enableLinkPreviews) {
             const {data} = await this.props.actions.getRedirectLocation(this.state.link);
             const {link} = this.state;
             if (data && data.location && this.mounted) {
@@ -115,17 +108,11 @@ export default class PostBodyAdditionalContent extends React.PureComponent {
 
     UNSAFE_componentWillReceiveProps(nextProps) { // eslint-disable-line camelcase
         if (nextProps.post.message !== this.props.post.message) {
-            const {metadata} = nextProps.post;
-            const embedMetadata = metadata && metadata.embeds && metadata.embeds[0];
-            const link = embedMetadata && embedMetadata.url ? embedMetadata.url : Utils.extractFirstLink(nextProps.post.message);
-
             this.setState({
-                link,
+                link: Utils.extractFirstLink(nextProps.post.message),
             }, () => {
                 // check the availability of the image link
-                if (!metadata) {
-                    this.loadShortenedImageLink();
-                }
+                this.loadShortenedImageLink();
                 this.preCheckImageLink();
             });
         }
@@ -163,6 +150,10 @@ export default class PostBodyAdditionalContent extends React.PureComponent {
             image.onload = () => {
                 this.handleLinkLoaded();
             };
+
+            image.onerror = () => {
+                this.handleLinkLoadError();
+            };
         }
     }
 
@@ -189,10 +180,6 @@ export default class PostBodyAdditionalContent extends React.PureComponent {
             return false;
         }
 
-        if (this.state.isMetadataImage) {
-            return true;
-        }
-
         if (YoutubeVideo.isYoutubeLink(link)) {
             return true;
         }
@@ -202,6 +189,12 @@ export default class PostBodyAdditionalContent extends React.PureComponent {
         }
 
         return false;
+    }
+
+    handleLinkLoadError() {
+        this.setState({
+            linkLoadError: true,
+        });
     }
 
     handleLinkLoaded() {
@@ -239,6 +232,7 @@ export default class PostBodyAdditionalContent extends React.PureComponent {
                 <PostImage
                     channelId={this.props.post.channel_id}
                     link={link}
+                    onLinkLoadError={this.handleLinkLoadError}
                     onLinkLoaded={this.handleLinkLoaded}
                     handleImageClick={this.handleImageClick}
                     dimensions={metadata && metadata.images && metadata.images[link]}
@@ -286,7 +280,6 @@ export default class PostBodyAdditionalContent extends React.PureComponent {
             <ViewImageModal
                 show={this.state.showPreviewModal}
                 onModalDismissed={() => this.setState({showPreviewModal: false})}
-                postId={this.props.post.id}
                 startIndex={0}
                 fileInfos={[{
                     has_preview_image: false,

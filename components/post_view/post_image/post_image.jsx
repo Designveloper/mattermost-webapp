@@ -93,9 +93,25 @@ export default class PostImageEmbed extends React.PureComponent {
             errored: false,
         });
 
-        if (!this.props.dimensions) {
-            postListScrollChange();
+    componentDidUpdate(prevProps) {
+        if (!this.state.loaded && prevProps.link !== this.props.link) {
+            this.loadImg(this.props.link);
         }
+    }
+
+    loadImg(src) {
+        const img = new Image();
+        img.onload = this.handleLoadComplete;
+        img.onerror = this.handleLoadError;
+        img.src = PostUtils.getImageSrc(src, this.props.hasImageProxy);
+    }
+
+    handleLoadComplete() {
+        this.setState({
+            loaded: true,
+            errored: false,
+        });
+
         if (this.props.onLinkLoaded) {
             this.props.onLinkLoaded();
         }
