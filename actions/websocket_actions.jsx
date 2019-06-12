@@ -42,7 +42,7 @@ import {closeRightHandSide} from 'actions/views/rhs';
 import {browserHistory} from 'utils/browser_history';
 import {loadChannelsForCurrentUser} from 'actions/channel_actions.jsx';
 import * as GlobalActions from 'actions/global_actions.jsx';
-import {handleNewPost} from 'actions/post_actions.jsx';
+import {handleNewPost, removePostFromView} from 'actions/post_actions.jsx';
 import * as StatusActions from 'actions/status_actions.jsx';
 import {loadProfilesForSidebar} from 'actions/user_actions.jsx';
 import store from 'stores/redux_store.jsx';
@@ -481,9 +481,11 @@ export function handlePostEditEvent(msg) {
     }
 }
 
-function handlePostDeleteEvent(msg) {
+async function handlePostDeleteEvent(msg) {
     const post = JSON.parse(msg.data.post);
-    dispatch({type: PostTypes.POST_DELETED, data: post});
+    dispatch(
+        removePostFromView(post)
+    );
 }
 
 async function handleTeamAddedEvent(msg) {
