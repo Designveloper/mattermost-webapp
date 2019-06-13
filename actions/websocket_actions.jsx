@@ -481,7 +481,7 @@ export function handlePostEditEvent(msg) {
     }
 }
 
-async function handlePostDeleteEvent(msg) {
+function handlePostDeleteEvent(msg) {
     const post = JSON.parse(msg.data.post);
     dispatch(
         removePostFromView(post)

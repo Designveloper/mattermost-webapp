@@ -315,7 +315,7 @@ export function deleteAndRemovePost(post) {
     };
 }
 export function removePostFromView(deletedPost) {
-    return async (dispatch, getState) => {
+    return (dispatch, getState) => {
         if (deletedPost.id === getSelectedPostId(getState())) {
             dispatch({
                 type: ActionTypes.SELECT_POST,
