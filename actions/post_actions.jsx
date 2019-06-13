@@ -314,6 +314,30 @@ export function deleteAndRemovePost(post) {
         return {data: true};
     };
 }
+export function removePostFromView(deletedPost) {
+    return (dispatch, getState) => {
+        if (deletedPost.id === getSelectedPostId(getState())) {
+            dispatch({
+                type: ActionTypes.SELECT_POST,
+                postId: '',
+                channelId: '',
+            });
+        }
+
+        dispatch({
+            type: PostTypes.REMOVE_POST,
+            data: deletedPost,
+        });
+
+        // Needed for search store
+        AppDispatcher.handleViewAction({
+            type: Constants.ActionTypes.REMOVE_POST,
+            post: deletedPost,
+        });
+
+        return {data: true};
+    };
+}
 
 export function toggleEmbedVisibility(postId) {
     return (dispatch, getState) => {
