@@ -14,6 +14,7 @@ import {canEditPost, comparePosts} from 'mattermost-redux/utils/post_utils';
 import {addRecentEmoji} from 'actions/emoji_actions';
 import * as StorageActions from 'actions/storage';
 import {loadNewDMIfNeeded, loadNewGMIfNeeded} from 'actions/user_actions.jsx';
+import AppDispatcher from '../dispatcher/app_dispatcher.jsx';
 import * as RhsActions from 'actions/views/rhs';
 import AppDispatcher from 'dispatcher/app_dispatcher.jsx';
 import {isEmbedVisible} from 'selectors/posts';
