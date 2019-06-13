@@ -4,7 +4,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {postListScrollChange} from 'actions/global_actions';
 import SizeAwareImage from 'components/size_aware_image';
 import LoadingImagePreview from 'components/loading_image_preview';
 import * as PostUtils from 'utils/post_utils.jsx';
@@ -92,29 +91,6 @@ export default class PostImageEmbed extends React.PureComponent {
             loaded: true,
             errored: false,
         });
-
-    componentDidUpdate(prevProps) {
-        if (!this.state.loaded && prevProps.link !== this.props.link) {
-            this.loadImg(this.props.link);
-        }
-    }
-
-    loadImg(src) {
-        const img = new Image();
-        img.onload = this.handleLoadComplete;
-        img.onerror = this.handleLoadError;
-        img.src = PostUtils.getImageSrc(src, this.props.hasImageProxy);
-    }
-
-    handleLoadComplete() {
-        this.setState({
-            loaded: true,
-            errored: false,
-        });
-
-        if (this.props.onLinkLoaded) {
-            this.props.onLinkLoaded();
-        }
     }
 
     handleLoadError() {
