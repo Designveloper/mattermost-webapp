@@ -691,13 +691,13 @@ export default class PostList extends React.PureComponent {
                     key={'postlist-' + channel.id}
                     onScroll={this.handleScroll}
                 >
+                    {topRow}
                     <div className='post-list__table'>
                         <div
                             id='postListContent'
                             ref={this.postListContentRef}
                             className='post-list__content'
                         >
-                            {topRow}
                             {this.createPosts(posts.slice(0, postVisibility))}
                         </div>
                     </div>
