@@ -55,6 +55,7 @@ export default class ViewImageModal extends React.PureComponent {
     };
 
     static defaultProps = {
+        post: {},
         show: false,
         fileInfos: [],
         startIndex: 0,
