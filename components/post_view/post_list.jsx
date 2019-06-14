@@ -418,7 +418,7 @@ export default class PostList extends React.PureComponent {
             } else {
                 this.setState({autoRetryEnable: false});
             }
-        } else {
+        } else if (this.props.posts) {
             this.setState({
                 atEnd: !moreToLoad && this.props.posts.length < this.props.postVisibility,
                 autoRetryEnable: true,
